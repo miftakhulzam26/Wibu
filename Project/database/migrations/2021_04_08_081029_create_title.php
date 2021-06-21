@@ -14,14 +14,14 @@ class CreateTitle extends Migration
     public function up()
     {
         Schema::create('title', function (Blueprint $table) {
-            $table->id('title_id');
-            $table->string('title_name');
-            $table->string('title_cover');
-            $table->text('title_sinopsis');
-            $table->bigInteger('title_favorit');
+            $table->id('id');
+            $table->string('name');
+            $table->string('cover');
+            $table->text('sinopsis');
+            $table->bigInteger('favorit')->nullable();
             $table->bigInteger('user_id')->unsigned();
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreign('user_id')->references('creator_id')->on('creator');
         });
     }
 
