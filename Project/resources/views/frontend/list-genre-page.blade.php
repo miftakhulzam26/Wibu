@@ -1,6 +1,8 @@
 @extends('frontend.layouts/list-template-page')
-
-@section('lgenre')
+@section('header')
+    Genre List - Novel Inspiration
+@endsection
+@section('content')
 <div class="section text-center">
     <h2 class="title">Genre List</h2>
 

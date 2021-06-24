@@ -1,6 +1,8 @@
 @extends('frontend.layouts/list-template-page')
-
-@section('ltag')
+@section('header')
+    Tag List - Novel Inspiration
+@endsection
+@section('content')
 <div class="section text-center">
     <h2 class="title">Tag List</h2>
 

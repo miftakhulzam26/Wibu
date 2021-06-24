@@ -1,6 +1,8 @@
 @extends('frontend.layouts/list-template-page')
-
-@section('lauthor')
+@section('header')
+    Author List - Novel Inspiration
+@endsection
+@section('content')
 <div class="section text-center">
     <h2 class="title">Author List</h2>
 

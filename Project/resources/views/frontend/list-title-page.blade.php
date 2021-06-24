@@ -1,6 +1,9 @@
 @extends('frontend.layouts/list-template-page')
 
-@section('ltitle')
+@section('header')
+    Novel List - Novel Inspiration
+@endsection
+@section('content')
 <div class="section text-center">
     <h2 class="title">Novel List</h2>
 
