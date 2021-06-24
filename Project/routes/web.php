@@ -35,6 +35,16 @@ Route::group(['namespace'=>'Frontend'], function () {
     Route::resource('profile', 'ProfileController');
     Route::resource('search', 'SearchController');
     Route::resource('ftitle', 'TitleController');
+    Route::resource('lpage', 'LpageController');
+    Route::resource('ulogin', 'UloginController');
+    Route::resource('sfinder', 'SfinderController');
+    Route::resource('profu', 'UprofileController');
+    Route::resource('lauth', 'PauthorController');
+    Route::resource('ltitle', 'PtitleController');
+    Route::resource('lgenre', 'PgenreController');
+    Route::resource('ltag', 'PtagController');
+    Route::resource('bmark', 'BookmarkController');
+
 
 });
 // Route::resource('posts', PostCRUDController::class);

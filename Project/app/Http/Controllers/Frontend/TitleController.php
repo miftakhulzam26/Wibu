@@ -10,6 +10,6 @@ class TitleController extends Controller
 {
     public function index()
     {
-        return view('frontend.title');
+        return view('frontend.title-page');
     }
 }

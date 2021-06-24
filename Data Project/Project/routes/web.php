@@ -32,5 +32,6 @@ Route::group(['namespace'=>'Frontend'], function () {
     Route::resource('profile', 'ProfileController');
     Route::resource('search', 'SearchController');
     Route::resource('ftitle', 'TitleController');
-
+    Route::resource('ulogin', 'UloginController');
+    Route::resource('rlogin', 'RloginController');
 });

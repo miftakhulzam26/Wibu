@@ -47,21 +47,30 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">apps</i> Components
+              <i class="material-icons">apps</i> Novel
             </a>
             <div class="dropdown-menu dropdown-with-icons">
               <a href="../index.html" class="dropdown-item">
-                <i class="material-icons">layers</i> All Components
+                <i class="material-icons">content_paste</i> Filter Novel
               </a>
               <a href="https://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html" class="dropdown-item">
-                <i class="material-icons">content_paste</i> Documentation
+                <i class="material-icons">content_paste</i> Novel List
               </a>
             </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://www.creative-tim.com/product/material-kit-pro" target="_blank">
-              <i class="material-icons">unarchive</i> Upgrade to PRO
+              <i class="material-icons">face</i> Profile
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.creative-tim.com/product/material-kit-pro" target="_blank">
+              <i class="material-icons">lock-outline</i> login
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.creative-tim.com/product/material-kit-pro" target="_blank">
+              <i class="material-icons">unarchive</i> Download
             </a>
           </li>
           <li class="nav-item">

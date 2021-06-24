@@ -41,7 +41,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
-                  <i class="material-icons">favorite</i> Favorite
+                  <i class="material-icons">favorite</i> Bookmark
                 </a>
               </li>
             </ul>
@@ -92,26 +92,26 @@
         <div class="tab-pane text-center gallery" id="works">
           <div class="row">
             <div class="col-md-3 ml-auto">
-              <img src="{{ asset('frontend/assets/img/examples/olu-eletu.jpg') }}" class="rounded">
-              <img src="{{ asset('frontend/assets/img/examples/clem-onojeghuo.jpg') }}" class="rounded">
-              <img src="{{ asset('frontend/assets/img/examples/cynthia-del-rio.jpg') }}" class="rounded">
+              <img src="{{ asset('img/frontend/cover/test1.jpg') }}" class="rounded">
+              <img src="{{ asset('img/frontend/cover/test1.jpg') }}" class="rounded">
+              <img src="{{ asset('img/frontend/cover/test1.jpg') }}" class="rounded">
             </div>
             <div class="col-md-3 mr-auto">
-              <img src="{{ asset('frontend/assets/img/examples/mariya-georgieva.jpg') }}" class="rounded">
-              <img src="{{ asset('frontend/assets/img/examples/clem-onojegaw.jpg') }}" class="rounded">
+              <img src="{{ asset('img/frontend/cover/test1.jpg') }}" class="rounded">
+              <img src="{{ asset('img/frontend/cover/test1.jpg') }}" class="rounded">
             </div>
           </div>
         </div>
         <div class="tab-pane text-center gallery" id="favorite">
           <div class="row">
             <div class="col-md-3 ml-auto">
-              <img src="{{ asset('frontend/assets/img/examples/mariya-georgieva.jpg') }}" class="rounded">
-              <img src="{{ asset('frontend/assets/img/examples/studio-3.jpg') }}" class="rounded">
+              <img src="{{ asset('img/frontend/cover/test1.jpg') }}" class="rounded">
+              <img src="{{ asset('img/frontend/cover/test1.jpg') }}" class="rounded">
             </div>
             <div class="col-md-3 mr-auto">
-              <img src="{{ asset('frontend/assets/img/examples/clem-onojeghuo.jpg') }}" class="rounded">
-              <img src="{{ asset('frontend/assets/img/examples/olu-eletu.jpg') }}" class="rounded">
-              <img src="{{ asset('frontend/assets/img/examples/studio-1.jpg') }}" class="rounded">
+              <img src="{{ asset('img/frontend/cover/test1.jpg') }}" class="rounded">
+              <img src="{{ asset('img/frontend/cover/test1.jpg') }}" class="rounded">
+              <img src="{{ asset('img/frontend/cover/test1.jpg') }}" class="rounded">
             </div>
           </div>
         </div>
