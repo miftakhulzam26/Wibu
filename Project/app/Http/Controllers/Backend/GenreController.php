@@ -15,6 +15,7 @@ class GenreController extends Controller
     }
     public function create()
     {
+        $genre = null;
         return view('backend.genre.create',compact('genre'));
     }
     public function store(Request $request){

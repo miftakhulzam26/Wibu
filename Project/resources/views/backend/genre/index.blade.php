@@ -97,6 +97,7 @@
                       @endforeach
                   </tbody>
                 </table>
+                {!! $genre->links() !!}
               </div>
             </div>
           </div>

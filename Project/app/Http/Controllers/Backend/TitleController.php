@@ -28,6 +28,7 @@ class TitleController extends Controller
      */
     public function create()
     {
+        $title = null;
         return view('backend.title.create',compact('title'));
     }
 
@@ -60,7 +61,7 @@ class TitleController extends Controller
         $post->name = $request->judul;
         $post->sinopsis = $request->sinopsis;
         $post->cover = $nama_file;
-        $post->user_id = $request->pengarang;
+        $post->creator_id = $request->pengarang;
 
 
         $post->save();
@@ -120,7 +121,7 @@ class TitleController extends Controller
 
         $post->name = $request->judul;
         $post->sinopsis = $request->sinopsis;
-        $post->user_id = $request->pengarang;
+        $post->creator_id = $request->pengarang;
         $post->save();
 
         return redirect()->route('title.index')

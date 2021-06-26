@@ -41,6 +41,9 @@ Route::group(['namespace'=>'Frontend'], function () {
     Route::resource('lgenre', 'PgenreController');
     Route::resource('ltag', 'PtagController');
     Route::resource('bmark', 'BookmarkController');
+    Route::resource('gdesc', 'GdescController');
+    Route::resource('tdesc', 'TdescController');
+    Route::resource('addc', 'AddchapterController');
 
 
 });

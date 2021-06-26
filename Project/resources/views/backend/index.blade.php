@@ -64,7 +64,7 @@
               <div class="card-icon">
                 <i class="fa fa-twitter"></i>
               </div>
-              <p class="card-category">Followers</p>
+              <p class="card-category">Genre</p>
               <h3 class="card-title">+245</h3>
             </div>
             <div class="card-footer">

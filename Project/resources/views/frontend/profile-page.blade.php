@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
                    <div class="profile">
-                        <div class="avatar">{{ asset('') }}
+                        <div class="avatar">
                             <img src="{{ asset('frontend/assets/img/faces/christian.jpg') }}" alt="Circle Image" class="img-circle img-responsive img-raised">
                         </div>
                         <div class="name">

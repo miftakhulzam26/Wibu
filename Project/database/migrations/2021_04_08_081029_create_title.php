@@ -19,9 +19,9 @@ class CreateTitle extends Migration
             $table->string('cover');
             $table->text('sinopsis');
             $table->bigInteger('favorit')->nullable();
-            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('creator_id')->unsigned();
             $table->timestamps();
-            $table->foreign('user_id')->references('creator_id')->on('creator');
+            $table->foreign('creator_id')->references('creator_id')->on('creator');
         });
     }
 
