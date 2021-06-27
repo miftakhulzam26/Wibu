@@ -8,8 +8,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title">Add title</h4>
-              <p class="card-category">Add New title</p>
+              <h4 class="card-title">Add Title</h4>
+              <p class="card-category">Add New Title</p>
             </div>
             <div class="card-body">
               <form method="POST" action="{{ route('title.store') }}" enctype="multipart/form-data">
@@ -87,10 +87,18 @@
                         @enderror
                     </div>
                     <div class="col-md-4">
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label class="bmd-label-floating">Pengarang</label>
                             <input type="text" name="pengarang" class="form-control">
-                        </div>
+                        </div>-->
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Author</label>
+                            <select class="form-control selectpicker" name="pengarang" data-style="btn btn-link" id="exampleFormControlSelect1">
+                              @foreach ($author as $item)
+                              <option value="{{$item->creator_id}}">{{$item->creator_name}}</option>
+                              @endforeach
+                            </select>
+                          </div>
                         {{-- pesan error  --}}
                         @error('pengarang')
                             <div class="alert alert-danger">{{ $message }}</div>
@@ -120,7 +128,7 @@
                         @enderror
                     </div>
                 </div>
-                <button type="submit" class="btn btn-info pull-right">Add New title</button>
+                <button type="submit" class="btn btn-info pull-right">Add New Title</button>
                 <div class="clearfix"></div>
               </form>
             </div>

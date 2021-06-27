@@ -19,8 +19,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title ">User Table</h4>
-              <p class="card-category"> Tabel Data User</p>
+              <h4 class="card-title ">Chapter Table</h4>
+              <p class="card-category"> Tabel Data Chapter</p>
             </div>
             <div class="card-body">
               <div class="table-responsive">

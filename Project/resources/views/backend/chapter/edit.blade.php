@@ -8,8 +8,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title">Edit User</h4>
-              <p class="card-category">Edit User</p>
+              <h4 class="card-title">Edit Chapter</h4>
+              <p class="card-category">Edit Chapter</p>
             </div>
             <div class="card-body">
               <form method="POST" action="{{ route('chapter.update',$chapter->chapter_id) }}">
@@ -55,13 +55,13 @@
                       <div class="form-group">
                         <label>Isi</label>
                         <div class="form-group">
-                          <label class="bmd-label-floating"> Don't Expose Your Private Information</label>
+                          <label class="bmd-label-floating"> Chapter Content Here.</label>
                           <textarea id="user_desc" name="text" class="form-control" rows="5">{{ $chapter->chapter_text}}</textarea>
                         </div>
                       </div>
                     </div>
                   </div>
-                <button type="submit" class="btn btn-info pull-right">Save Edit User</button>
+                <button type="submit" class="btn btn-info pull-right">Save Edit Chapter</button>
                 <div class="clearfix"></div>
               </form>
             </div>

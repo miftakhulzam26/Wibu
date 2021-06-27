@@ -9,9 +9,12 @@ use Illuminate\Support\Facades\DB;
 
 class GdescController extends Controller
 {
-    public function index(Genre $genre)
+    public function index(Request $request, $id)
     {
-        $genre = DB::table('genre')->get();
+        $genre = DB::table('genre')
+        ->Where('id','=', $id)
+        ->get();
+
         return view('frontend.gdesc-page',compact('genre'));
     }
 }

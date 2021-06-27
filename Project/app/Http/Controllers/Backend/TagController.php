@@ -15,7 +15,7 @@ class TagController extends Controller
     }
     public function create()
     {
-
+        $tag = null;
         return view('backend.tag.create',compact('tag'));
     }
     public function store(Request $request){

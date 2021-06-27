@@ -54,3 +54,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/upload', 'UploadController@index');
 Route::post('/upload/proses', 'UploadController@store');
+
+Route::get('gdesc/{id}', 'GdescController@index');

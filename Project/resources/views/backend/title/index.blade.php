@@ -71,7 +71,7 @@
                             {{$item->favorit}}
                         </td>
                         <td>
-                            {{$item->user_id}}
+                            {{$item->creator_id}}
                         </td>
                         <td>
                             {{$item->created_at}}

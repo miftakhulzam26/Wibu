@@ -8,8 +8,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title">Add User</h4>
-              <p class="card-category">Add New User</p>
+              <h4 class="card-title">Add Chapter</h4>
+              <p class="card-category">Add New Chapter</p>
             </div>
             <div class="card-body">
               <form method="POST" action="{{ route('chapter.store') }}">
@@ -44,7 +44,13 @@
                   <div class="col-md-4">
                     <div class="form-group">
                       <label class="bmd-label-floating">Novel</label>
-                      <input type="text" id="user_username" name="title_id" class="form-control">
+                      <!--<input type="text" id="user_username" name="title_id" class="form-control">
+                      <label for="exampleFormControlSelect1">Author</label>-->
+                            <select class="form-control selectpicker" name="title_id" data-style="btn btn-link" id="exampleFormControlSelect1">
+                              @foreach ($title as $item)
+                              <option value="{{$item->id}}">{{$item->name}}</option>
+                              @endforeach
+                            </select>
                     </div>
                   </div>
                 </div>
@@ -53,13 +59,13 @@
                     <div class="form-group">
                       <label>Isi</label>
                       <div class="form-group">
-                        <label class="bmd-label-floating"> Don't Expose Your Private Information</label>
+                        <label class="bmd-label-floating"> Chapter Content Here.</label>
                         <textarea id="user_desc" name="text" class="form-control" rows="5"></textarea>
                       </div>
                     </div>
                   </div>
                 </div>
-                <button type="submit" class="btn btn-info pull-right">Add New User</button>
+                <button type="submit" class="btn btn-info pull-right">Add New Chapter</button>
                 <div class="clearfix"></div>
               </form>
             </div>

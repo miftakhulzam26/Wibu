@@ -6,6 +6,7 @@ use App\Post;
 use App\Title;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class TitleController extends Controller
 {
@@ -18,8 +19,10 @@ class TitleController extends Controller
     {
         $title = Title::orderBy('id')->paginate(5);
 
+
         return view('backend.title.index',compact('title'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -29,7 +32,8 @@ class TitleController extends Controller
     public function create()
     {
         $title = null;
-        return view('backend.title.create',compact('title'));
+        $author = DB::table('creator')->get();
+        return view('backend.title.create',compact('title','author'));
     }
 
     /**

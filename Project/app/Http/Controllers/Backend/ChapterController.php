@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Chapter;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class ChapterController extends Controller
@@ -15,7 +15,9 @@ class ChapterController extends Controller
         return view('backend.chapter.index', compact('chapter'));
     }
     public function create(){
-        return view('backend.chapter.create', compact('chapter'));
+        $chapter = null;
+        $title = DB::table('title')->get();
+        return view('backend.chapter.create', compact('chapter','title'));
     }
     public function store(Request $request){
         $request->validate([
