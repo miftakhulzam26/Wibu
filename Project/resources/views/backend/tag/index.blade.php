@@ -2,7 +2,7 @@
 
 
 
-@section('user')
+@section('content')
 
 <div class="content">
     <div class="container-fluid">
@@ -19,8 +19,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title ">User Table</h4>
-              <p class="card-category"> Tabel Data User</p>
+              <h4 class="card-title ">Tag Table</h4>
+              <p class="card-category"> Tabel Data Tag</p>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -49,6 +49,12 @@
                     </th> --}}
                     <th>
                       Description
+                    </th>
+                    <th>
+                      Created at
+                    </th>
+                    <th>
+                      Updated at
                     </th>
                     <th>
 
@@ -81,6 +87,12 @@
                         <td>
                             {{$item->tag_desc}}
                         </td>
+                        <td>
+                            {{$item->created_at}}
+                        </td>
+                        <td>
+                            {{$item->updated_at}}
+                        </td>
                         <td class="td-actions text-right">
                         <form action="{{ route('tag.destroy',$item->id) }}" method="POST">
                           <a href="{{ route('tag.edit',$item->id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
@@ -101,7 +113,7 @@
               </div>
             </div>
           </div>
-          <a href="{{ route('tag.create') }}"><button type="button" class="btn btn-info">tambah</button></a>
+          <a href="{{ route('tag.create') }}"><button type="button" class="btn btn-info">Tambah</button></a>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 @extends('backend.layouts.template')
 
-@section('edituser')
+@section('content')
 
 <div class="content">
     <div class="container-fluid">
@@ -8,8 +8,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title">Edit User</h4>
-              <p class="card-category">Edit User</p>
+              <h4 class="card-title">Edit Tag</h4>
+              <p class="card-category">Edit Tag</p>
             </div>
             <div class="card-body">
               <form method="POST" action="{{ route('tag.update',$tag->id) }}">

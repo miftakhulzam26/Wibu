@@ -1,6 +1,6 @@
 @extends('backend.layouts.template')
 
-@section('edituser')
+@section('content')
 
 <div class="content">
     <div class="container-fluid">
@@ -8,8 +8,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title">Edit creator</h4>
-              <p class="card-category">Edit creator</p>
+              <h4 class="card-title">Edit Creator</h4>
+              <p class="card-category">Edit Creator</p>
             </div>
             <div class="card-body">
               <form method="POST" action="{{ isset($creator) ? route('user.update',$creator->creator_id) : route('user.store') }}">

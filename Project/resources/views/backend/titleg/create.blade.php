@@ -8,11 +8,11 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title">Add Title</h4>
-              <p class="card-category">Add New Title</p>
+              <h4 class="card-title">Add Title Genre</h4>
+              <p class="card-category">Add New Genre for Title</p>
             </div>
             <div class="card-body">
-              <form method="POST" action="{{ route('title.store') }}" enctype="multipart/form-data">
+              <form method="POST" action="{{ route('titleg.store') }}" enctype="multipart/form-data">
                 {!! csrf_field() !!}
                 {{-- <div class="row">
                   <div class="col-md-4">
@@ -78,11 +78,15 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="bmd-label-floating">Judul</label>
-                            <input type="text" name="judul" class="form-control">
+                            <label for="exampleFormControlSelect1">Title</label>
+                            <select class="form-control selectpicker" name="title_id" data-style="btn btn-link" id="exampleFormControlSelect1">
+                              @foreach ($title as $item)
+                              <option value="{{$item->id}}">{{$item->name}}</option>
+                              @endforeach
+                            </select>
                         </div>
                         {{-- pesan error  --}}
-                        @error('judul')
+                        @error('title_id')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
@@ -92,21 +96,21 @@
                             <input type="text" name="pengarang" class="form-control">
                         </div>-->
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Author</label>
-                            <select class="form-control selectpicker" name="pengarang" data-style="btn btn-link" id="exampleFormControlSelect1">
-                              @foreach ($author as $item)
-                              <option value="{{$item->creator_id}}">{{$item->creator_name}}</option>
+                            <label for="exampleFormControlSelect1">Genre</label>
+                            <select class="form-control selectpicker" name="genre_id" data-style="btn btn-link" id="exampleFormControlSelect1">
+                              @foreach ($genre as $item)
+                              <option value="{{$item->id}}">{{$item->genre_name}}</option>
                               @endforeach
                             </select>
                           </div>
                         {{-- pesan error  --}}
-                        @error('pengarang')
+                        @error('genre_id')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
 
                 </div>
-                <div class="row">
+                <!--<div class="row">
                     <div class="col-md-4">
                         <label class="bmd-label-floating">Input File</label>
                         <input type="file" id="nama" name="cover">
@@ -127,8 +131,8 @@
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
-                </div>
-                <button type="submit" class="btn btn-info pull-right">Add New Title</button>
+                </div>-->
+                <button type="submit" class="btn btn-info pull-right">Add New Title Genre</button>
                 <div class="clearfix"></div>
               </form>
             </div>

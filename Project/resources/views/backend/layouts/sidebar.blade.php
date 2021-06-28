@@ -8,10 +8,10 @@
   -->
       <!-- your logo here -->
       <div class="logo">
-        <a href="#" class="simple-text logo-mini">
+        <a href="{{ route('index') }}" class="simple-text logo-mini">
           NovI
         </a>
-        <a href="#" class="simple-text logo-normal">
+        <a href="{{ route('index') }}" class="simple-text logo-normal">
           Novel Inspiration
         </a>
       </div>
@@ -19,7 +19,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="#0">
+            <a class="nav-link" href="{{ route('index') }}">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -44,19 +44,31 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{ route('genre.index') }}">
-              <i class="material-icons">location_ons</i>
+              <i class="material-icons">bubble_chart</i>
               <p>Genre</p>
             </a>
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{ route('tag.index') }}">
-              <i class="material-icons">notifications</i>
+              <i class="material-icons">bubble_chart</i>
               <p>Tag</p>
             </a>
           </li>
           <li class="nav-item ">
+            <a class="nav-link" href="{{ route('titleg.index') }}">
+              <i class="material-icons">library_books</i>
+              <p>Title-Genre</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{{ route('title.index') }}">
+              <i class="material-icons">library_books</i>
+              <p>Title-Tag</p>
+            </a>
+          </li>
+          <li class="nav-item ">
             <a class="nav-link" href="./rtl.html">
-              <i class="material-icons">language</i>
+              <i class="material-icons">bubble_chart</i>
               <p>User</p>
             </a>
           </li>

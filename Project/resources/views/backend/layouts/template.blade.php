@@ -28,11 +28,7 @@
 
           @yield('dashboard')
 
-          @yield('user')
-
-          @yield('adduser')
-
-          @yield('edituser')
+          @yield('content')
 
         </div>
       </div>

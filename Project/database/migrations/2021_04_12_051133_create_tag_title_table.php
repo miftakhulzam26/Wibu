@@ -14,6 +14,7 @@ class CreateTagTitleTable extends Migration
     public function up()
     {
         Schema::create('tag_title', function (Blueprint $table) {
+            $table->id('titletag_id');
             $table->bigInteger('title_id')->unsigned();
             $table->bigInteger('tag_id')->unsigned();
             $table->foreign('title_id')->references('id')->on('title');

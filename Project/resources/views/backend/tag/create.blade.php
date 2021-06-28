@@ -1,6 +1,6 @@
 @extends('backend.layouts.template')
 
-@section('adduser')
+@section('content')
 
 <div class="content">
     <div class="container-fluid">
@@ -8,8 +8,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title">Add User</h4>
-              <p class="card-category">Add New User</p>
+              <h4 class="card-title">Add Tag</h4>
+              <p class="card-category">Add New Tag</p>
             </div>
             <div class="card-body">
               <form method="POST" action="{{ route('tag.store') }}">

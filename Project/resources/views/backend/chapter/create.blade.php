@@ -1,6 +1,6 @@
 @extends('backend.layouts.template')
 
-@section('adduser')
+@section('content')
 
 <div class="content">
     <div class="container-fluid">
