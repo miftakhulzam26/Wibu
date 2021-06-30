@@ -28,7 +28,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('lgenre.index') }}">
+                    <a href="{{ route('gdesc.index') }}">
                         <i class="material-icons">assignment</i> Genre List
                     </a>
                 </li>

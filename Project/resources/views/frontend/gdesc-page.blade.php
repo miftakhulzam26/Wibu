@@ -8,10 +8,10 @@
     <div class="section text-left">
         <div class="col-md-8">
 
-            <h3>{{$genre->genre_name}}</h3>
+            <h3>{{$gdesc->genre_name}}</h3>
             <br>
             <p>
-                {{$genre->genre_desc}}
+                {{$gdesc->genre_desc}}
             </p>
             <br>
 
