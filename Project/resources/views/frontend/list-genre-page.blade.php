@@ -9,7 +9,7 @@
     <div class="section text-left">
         @foreach ($gdesc as $item)
         <div class="col-md-3">
-            <a href="{{ route('gdesc.index', $item->id) }}">{{$item->genre_name}}</a>
+            <a href="{{ route('gdesc.show', $item->id) }}">{{$item->genre_name}}</a>
         </div>
         @endforeach
 
