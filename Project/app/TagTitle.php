@@ -8,4 +8,5 @@ class TagTitle extends Model
 {
     //
     protected $table = 'tag_title' ;
+    protected $primaryKey = 'titletag_id';
 }

@@ -20,6 +20,8 @@ class CreateReviewTable extends Migration
             $table->foreign('title_id')->references('id')->on('title');
             $table->foreign('creator_id')->references('creator_id')->on('creator');
             $table->string('content')->nullable()->default('text');
+            $table->integer('rate');
+            $table->timestamps();
         });
     }
 

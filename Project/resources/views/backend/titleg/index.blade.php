@@ -17,8 +17,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title ">Title Table</h4>
-              <p class="card-category"> Tabel Data Title</p>
+              <h4 class="card-title ">Genre Title Table</h4>
+              <p class="card-category"> Tabel Data Genre Title</p>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -99,7 +99,7 @@
               </div>
             </div>
           </div>
-          <a href="{{ route('titleg.create') }}"><button type="button" class="btn btn-info">tambah</button></a>
+          <a href="{{ route('titleg.create') }}"><button type="button" class="btn btn-info">Tambah</button></a>
         </div>
       </div>
     </div>

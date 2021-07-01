@@ -8,15 +8,14 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title">Edit title</h4>
-              <p class="card-category">Edit title</p>
+              <h4 class="card-title">Edit Tag Title </h4>
+              <p class="card-category">Edit Tag Title</p>
             </div>
             <div class="card-body">
-              <form method="POST" action="{{ route('title.update',$title->id) }}" enctype="multipart/form-data">
+              <form method="POST" action="{{ route('titlet.update',$titlet->titletag_id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-                <input type="hidden" id="title_id" name="title_id" value="{{ $title->id }}" class="form-control">
-                <input type="hidden" name="favorit" id="favorit" value="{{$title->favorit}}">
+                <input type="hidden" id="titletag_id" name="titletag_id" value="{{ $titlet->titletag_id }}" class="form-control">
                 {{-- <div class="row">
                   <div class="col-md-5">
                     <div class="form-group">
@@ -71,49 +70,36 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="bmd-label-floating">Judul</label>
-                            <input type="text" name="judul" class="form-control" value="{{ $title->name }}">
+                            <label for="exampleFormControlSelect1">Title</label>
+                            <select class="form-control selectpicker" name="title_id" data-style="btn btn-link" id="exampleFormControlSelect1">
+                              @foreach ($title as $item)
+                              <option value="{{$item->id}}">{{$item->name}}</option>
+                              @endforeach
+                            </select>
                         </div>
                         {{-- pesan error  --}}
-                        @error('judul')
+                        @error('title_id')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label class="bmd-label-floating">Pengarang</label>
-                            <input type="text" name="pengarang" class="form-control" value="{{ $title->user_id }}">
-                        </div>
+                            <label for="exampleFormControlSelect1">Tag</label>
+                            <select class="form-control selectpicker" name="tag_id" data-style="btn btn-link" id="exampleFormControlSelect1">
+                              @foreach ($tag as $item)
+                              <option value="{{$item->id}}">{{$item->tag_name}}</option>
+                              @endforeach
+                            </select>
+                          </div>
                         {{-- pesan error  --}}
-                        @error('pengarang')
+                        @error('tag_id')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                     </div>
 
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <label class="bmd-label-floating">Input File</label>
-                        <input type="file" id="nama" name="image">
-                        {{-- pesan error  --}}
-                        @error('image')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            <label class="bmd-label-floating">Sinopsis</label>
-                            <textarea name="sinopsis" rows="5" class="form-control">{{ $title->sinopsis }}</textarea>
-                        </div>
-                        {{-- pesan error  --}}
-                        @error('sinopsis')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-info pull-right">Save Edit title</button>
+
+                <button type="submit" class="btn btn-info pull-right">Save Edit Tag Title</button>
                 <div class="clearfix"></div>
               </form>
             </div>

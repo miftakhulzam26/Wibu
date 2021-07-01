@@ -6,10 +6,22 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 
+use App\Genre;
+
+use App\Tag;
+
+use App\Title;
+
 class SfinderController extends Controller
 {
     public function index()
     {
-        return view('frontend.search-page');
+        $genre = Genre::all();
+        $tag = Tag::all();
+        $tag_title = TagTitle::all();
+        $genre_title = GenreTitle::all();
+
+
+        return view('frontend.search-page', compact('genre','tag'));
     }
 }

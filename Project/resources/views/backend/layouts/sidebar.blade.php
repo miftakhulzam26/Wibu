@@ -61,7 +61,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="{{ route('title.index') }}">
+            <a class="nav-link" href="{{ route('titlet.index') }}">
               <i class="material-icons">library_books</i>
               <p>Title-Tag</p>
             </a>
@@ -70,12 +70,6 @@
             <a class="nav-link" href="./rtl.html">
               <i class="material-icons">bubble_chart</i>
               <p>User</p>
-            </a>
-          </li>
-          <li class="nav-item active-pro ">
-            <a class="nav-link" href="./upgrade.html">
-              <i class="material-icons">unarchive</i>
-              <p>Upgrade to PRO</p>
             </a>
           </li>
         </ul>

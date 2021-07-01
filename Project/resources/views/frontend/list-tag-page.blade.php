@@ -9,7 +9,7 @@
     <div class="section text-left">
         @foreach ($ftag as $item)
         <div class="col-md-3">
-            <a href="{{ route('tdesc.index', ['id'=>$item->id]) }}">{{$item->tag_name}}</a>
+            <a href="{{ route('tdesc.show', $item->id) }}">{{$item->tag_name}}</a>
         </div>
         @endforeach
 

@@ -19,7 +19,8 @@ class CreateCommentTable extends Migration
             $table->bigInteger('creator_id')->unsigned();
             $table->foreign('chapter_id')->references('chapter_id')->on('chapter');
             $table->foreign('creator_id')->references('creator_id')->on('creator');
-            $table->string('content')->nullable()->default('text');
+            $table->string('content');
+            $table->timestamps();
         });
     }
 

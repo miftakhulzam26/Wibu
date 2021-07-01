@@ -1,7 +1,7 @@
 @extends('frontend/layouts.template')
 
 @section('header')
-    Series Finder
+    Series Finder - Novel Inspiration
 @endsection
 
 @section('content')
@@ -16,62 +16,16 @@
                         Choose the genre that want to be included.
                     </p>
                     <div class="row">
+                        @foreach ($genre as $item)
                         <div class="col-md-2 col-lg-3">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
+                                    <input type="checkbox" value="{{$item->id}}" name="optionsCheckboxes">
+                                    {{$item->genre_name}}
                                 </label>
                             </div>
                         </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
+                        @endforeach
 
                 </div>
                 <div class="features">
@@ -80,62 +34,18 @@
                         Choose the tag that want to be included.
                     </p>
                     <div class="row">
+                        @foreach ($tag as $item)
                         <div class="col-md-2 col-lg-3">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
+                                    <input type="checkbox" value="{{$item->id}}" name="optionsCheckboxes">
+                                    {{$item->tag_name}}
+
                             </div>
                         </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-lg-3">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" name="optionsCheckboxes">
-                                    Unchecked
-                                </label>
-                            </div>
-                        </div>
+                        @endforeach
+
+
 
                 </div>
                 <div class="features">
@@ -144,11 +54,11 @@
                         Choose the status that want to be included.
                     </p>
                     <div class="col-lg-5 col-md-6 col-sm-3">
-                        <select class="selectpicker" data-style="select-with-transition" multiple title="Choose City" data-size="7">
-                            <option disabled> Choose Status</option>
-                            <option value="2">Completed </option>
-                            <option value="3">Hiatus</option>
-                            <option value="4">Ongoing</option>
+                        <select class="selectpicker" data-style="select-with-transition" multiple title="Choose Status" data-size="7">
+                            <!--<option disabled> Choose Status</option>-->
+                            <option value="Completed">Completed </option>
+                            <option value="Hiatus">Hiatus</option>
+                            <option value="Ongoing">Ongoing</option>
                         </select>
                     </div>
                 </div>
@@ -165,7 +75,35 @@
             </div>
         </div>
     </div>
+    <script>
+        function getIds(checkboxName) {
+            let checkBoxes = document.getElementsByName(checkboxName);
+            let ids = Array.prototype.slice.call(checkBoxes)
+                            .filter(ch => ch.checked==true)
+                            .map(ch => ch.value);
+            return ids;
+        }
 
+        function filterResults () {
+            let genreIds = getIds("genre");
+
+            let tagIds = getIds("tag");
+
+            let href = 'search?';
+
+            if(brandIds.length) {
+                href += 'filter[genre]=' + gebreIds;
+            }
+
+            if(catagoryIds.length) {
+                href += '&filter[tag]=' + tagIds;
+            }
+
+            document.location.href=href;
+        }
+
+        document.getElementById("filter").addEventListener("click", filterResults);
+    </script>
 
 
 

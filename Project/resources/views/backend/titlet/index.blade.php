@@ -1,7 +1,5 @@
 @extends('backend.layouts.template')
 
-
-
 @section('content')
 
 <div class="content">
@@ -19,8 +17,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title ">Creator Table</h4>
-              <p class="card-category"> Tabel Data Creator</p>
+              <h4 class="card-title ">Tag Title Table</h4>
+              <p class="card-category"> Tabel Data Tag Title</p>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -30,45 +28,60 @@
                       ID
                     </th>
                     <th>
-                      Name
+                      Title Name
                     </th>
                     <th>
-                      Profile
+                      Tag Name
+                    </th>
+                    <!--<th>
+                      Sinopsis
                     </th>
                     <th>
-                      Email
+                      Favorit
                     </th>
                     <th>
-                      Description
+                      Author
                     </th>
                     <th>
-                      Join Date
+                      Created at
                     </th>
+                    <th>
+                      Tanggal Terupdate
+                    </th>-->
                     <th>
 
                     </th>
                   </thead>
                   <tbody>
-                      @foreach ($creator as $item)
+                      @foreach ($titlet as $item)
                       <tr>
+                        <td>
+                            {{$item->titletag_id}}
+                        </td>
+                        <td>
+                            {{$item->title_id}}
+                        </td>
+                        <td>
+                            {{$item->tag_id}}
+                        </td>
+                        <!--<td>
+                            {{$item->sinopsis}}
+                        </td>
+                        <td>
+                            {{$item->favorit}}
+                        </td>
                         <td>
                             {{$item->creator_id}}
                         </td>
                         <td>
-                            {{$item->creator_name}}
-                        </td>
-                        <td>
-                            {{$item->creator_email}}
-                        </td>
-                        <td>
-                            {{$item->creator_desc}}
-                        </td>
-                        <td>
                             {{$item->created_at}}
                         </td>
+                        <td>
+                            {{$item->updated_at}}
+                        </td>-->
                         <td class="td-actions text-right">
-                        <form action="{{ route('user.destroy',$item->creator_id) }}" method="POST">
-                          <a href="{{ route('user.edit',$item->creator_id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                        <form action="{{ route('titlet.destroy',$item->titletag_id) }}" method="POST">
+                          <a href="{{ route('titlet.edit',$item->titletag_id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
                             <i class="material-icons">edit</i></a>
                           </button>
                           @csrf
@@ -82,10 +95,11 @@
                       @endforeach
                   </tbody>
                 </table>
+                {!! $titlet->links() !!}
               </div>
             </div>
           </div>
-          <a href="{{ route('user.create') }}"><button type="button" class="btn btn-info">tambah</button></a>
+          <a href="{{ route('titlet.create') }}"><button type="button" class="btn btn-info">Tambah</button></a>
         </div>
       </div>
     </div>

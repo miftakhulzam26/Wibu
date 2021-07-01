@@ -28,6 +28,7 @@ Route::group(['namespace'=>'Backend'], function () {
         Route::resource('tag', 'TagController');
         Route::resource('title', 'TitleController');
         Route::resource('titleg', 'TitleGenreController');
+        Route::resource('titlet', 'TitleTagController');
     });
 });
 
@@ -45,6 +46,7 @@ Route::group(['namespace'=>'Frontend'], function () {
     Route::resource('gdesc', 'GdescController');
     Route::resource('tdesc', 'TdescController');
     Route::resource('addc', 'AddchapterController');
+    Route::resource('utitle', 'UtitleController');
 
 
 });
@@ -57,3 +59,4 @@ Route::get('/upload', 'UploadController@index');
 Route::post('/upload/proses', 'UploadController@store');
 
 Route::get('gdesc/{id}', 'GdescController@index');
+Route::get('tdesc/{id}', 'TdescController@index');

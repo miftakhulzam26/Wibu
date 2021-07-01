@@ -6,10 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 
-class SearchController extends Controller
+class UtitleController extends Controller
 {
+    //
     public function index()
     {
-        return view('frontend.search');
+        return view('frontend.u-title-page');
     }
 }

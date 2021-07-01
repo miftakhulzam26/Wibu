@@ -18,6 +18,7 @@ class CreateChapterTable extends Migration
             $table->string('chapter_title');
             $table->string('chapter_text');
             $table->string('chapter_tts');
+            $table->integer('view')->default(0);
             $table->bigInteger('title_id')->unsigned();
             $table->timestamps();
             $table->foreign('title_id')->references('id')->on('title');

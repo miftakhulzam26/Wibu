@@ -46,6 +46,7 @@ class TitleController extends Controller
     {
         $request->validate([
             'judul' => 'required',
+            'favorit' => 'required',
             'cover' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'sinopsis' => 'required',
             'pengarang' => 'required',
@@ -63,6 +64,7 @@ class TitleController extends Controller
         $post = new Title;
 
         $post->name = $request->judul;
+        $post->favorit = $request->favorit;
         $post->sinopsis = $request->sinopsis;
         $post->cover = $nama_file;
         $post->creator_id = $request->pengarang;
@@ -108,6 +110,7 @@ class TitleController extends Controller
     {
         $request->validate([
             'judul' => 'required',
+            'favorit' => 'required',
             'sinopsis' => 'required',
             'pengarang' => 'required',
         ]);
@@ -124,6 +127,7 @@ class TitleController extends Controller
         }
 
         $post->name = $request->judul;
+        $post->favorit = $request->favorit;
         $post->sinopsis = $request->sinopsis;
         $post->creator_id = $request->pengarang;
         $post->save();
