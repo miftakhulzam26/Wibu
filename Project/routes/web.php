@@ -33,7 +33,7 @@ Route::group(['namespace'=>'Backend'], function () {
 });
 
 Route::group(['namespace'=>'Frontend'], function () {
-    Route::resource('ftitle', 'TitleController');
+    Route::resource('ftitle', 'FtitleController');
     Route::resource('lpage', 'LpageController');
     Route::resource('ulogin', 'UloginController');
     Route::resource('sfinder', 'SfinderController');
@@ -47,6 +47,10 @@ Route::group(['namespace'=>'Frontend'], function () {
     Route::resource('tdesc', 'TdescController');
     Route::resource('addc', 'AddchapterController');
     Route::resource('utitle', 'UtitleController');
+    Route::resource('fchapter', 'FchapterController');
+    Route::get('/ltitle', 'PtitleController@index')->name('ltitle.index');
+
+
 
 
 });
@@ -60,3 +64,8 @@ Route::post('/upload/proses', 'UploadController@store');
 
 Route::get('gdesc/{id}', 'GdescController@index');
 Route::get('tdesc/{id}', 'TdescController@index');
+Route::get('ftitle/{id}', 'App\Http\Controllers\Frontend\FtitleController@index');
+
+
+
+

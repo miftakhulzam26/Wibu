@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTitle extends Migration
+class CreateRepliesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateTitle extends Migration
      */
     public function up()
     {
-        Schema::create('title', function (Blueprint $table) {
+        Schema::create('replies', function (Blueprint $table) {
             $table->id('id');
-            $table->string('name');
-            $table->string('cover');
-            $table->text('sinopsis');
-            $table->integer('favorit')->default(0);
+            $table->bigInteger('comment_id')->unsigned();
             $table->bigInteger('creator_id')->unsigned();
+            $table->foreign('comment_id')->references('id')->on('comment');
+            $table->foreign('creator_id')->references('id')->on('creator')->onDelete('cascade');
+            $table->string('content');
             $table->timestamps();
-            $table->foreign('creator_id')->references('id')->on('creator');
         });
     }
 
@@ -32,6 +31,6 @@ class CreateTitle extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('title');
+        Schema::dropIfExists('replies');
     }
 }

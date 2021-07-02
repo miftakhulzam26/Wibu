@@ -6,24 +6,24 @@
 @section('content')
 <div class="section text-center">
     <h2 class="title">Novel List</h2>
- @foreach ($title as $item)
+ @foreach ($ftitle as $t)
  <div class="card card-plain card-blog">
     <div class="row">
         <div class="col-md-2">
             <div class="card-image">
-                <img class="img img-raised" src="{{ asset('images/'.$item->cover)  }}" width="100px" height="300px"/>
+                <img class="img img-raised" src="{{ asset('images/'.$t->cover)  }}" width="100px" height="300px"/>
             </div>
         </div>
         <div class="col-md-6">
             <!--<h6 class="category text-info">Enterprise</h6>-->
             <h4 class="card-title">
-                <a href="#pablo">{{$item->name}}</a>
+                <a href="{{ route('ftitle.show', $t->id) }}">{{$t->name}}</a>
             </h4>
             <p class="card-description">
-                {{$item->sinopsis}} <a href="#pablo"> Read More </a>
+                {{$t->sinopsis}} <a href="{{ route('ftitle.show', $t->id) }}"> Read More </a>
             </p>
             <p class="author">
-                Author : <a href="#pablo"><b>{{$item->creator_id}}</b></a>
+                Author : <a href="#pablo"><b>{{$t->creator_name}}</b></a>
             </a>
             <p class="author">
                 Genre :

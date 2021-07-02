@@ -10,17 +10,22 @@ use Illuminate\Support\Facades\DB;
 
 use App\Title;
 
-use App\Creator;
+
 
 class PtitleController extends Controller
 {
     public function index()
     {
-        //$title = DB::table('title')
-        //        ->leftJoin('creator', 'title.creator_id ','=','creator.creator_id')
-        //        ->get();
-        $title = Title::orderBy('id')->paginate(5);
+    //    $title = Title::all();
+    //    $title = Title::orderBy('id')->paginate(5);
 
-        return view('frontend.list-title-page',compact('title'));
+    //    return view('frontend.list-title-page',['title' => $title]);
+
+    $ftitle = DB::table('title')
+            ->join('creator', 'title.creator_id', '=', 'creator.creator_id')
+            ->select('title.*', 'creator.creator_name')
+            ->get();
+    return view('frontend.list-title-page',compact('ftitle'));
     }
+
 }

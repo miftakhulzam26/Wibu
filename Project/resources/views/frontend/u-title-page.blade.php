@@ -132,49 +132,73 @@
                           <tr>
                               <table class="table">
                                   <thead class=" text-primary">
-                                    <th>
+                                    <th class="text-left">
                                       Date
                                     </th>
-                                    <th>
+                                    <th class="text-center">
                                       Chapter
                                     </th>
-                                    <th>
-                                        Link
+                                    <th class="text-right">
+                                      Action
                                     </th>
                                   </thead>
                                   <tbody>
                                       <tr>
-                                         <td>
+                                         <td class="text-left">
                                               20XX/XX/XX
                                          </td>
-                                         <td>
+                                         <td class="text-center">
                                               Chapter 3
                                          </td>
-                                         <td>
-                                            <a href="http://">Read</a>
-                                         </td>
+                                         <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" class="btn btn-info">
+                                                <i class="material-icons">person</i>
+                                            </button>
+                                            <button type="button" rel="tooltip" class="btn btn-success">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button type="button" rel="tooltip" class="btn btn-danger">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </td>
                                       </tr>
                                       <tr>
-                                          <td>
+                                          <td class="text-left">
                                               20XX/XX/XX
                                           </td>
-                                          <td>
+                                          <td class="text-center">
                                               Chapter 2
                                           </td>
-                                          <td>
-                                            <a href="http://">Read</a>
-                                          </td>
+                                          <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" class="btn btn-info">
+                                                <i class="material-icons">person</i>
+                                            </button>
+                                            <button type="button" rel="tooltip" class="btn btn-success">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button type="button" rel="tooltip" class="btn btn-danger">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </td>
                                       </tr>
                                       <tr>
-                                          <td>
+                                          <td class="text-left">
                                               20XX/XX/XX
                                           </td>
-                                          <td>
+                                          <td class="text-center">
                                               Chapter 1
                                           </td>
-                                          <td>
-                                            <a href="http://">Read</a>
-                                          </td>
+                                          <td class="td-actions text-right">
+                                            <button type="button" rel="tooltip" class="btn btn-info">
+                                                <i class="material-icons">person</i>
+                                            </button>
+                                            <button type="button" rel="tooltip" class="btn btn-success">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                            <button type="button" rel="tooltip" class="btn btn-danger">
+                                                <i class="material-icons">close</i>
+                                            </button>
+                                        </td>
                                         </tr>
                                   </tbody>
                                 </table>
@@ -224,7 +248,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="media-area">
-                    <h3 class="title text-center">1 Comments</h3>
+                    <h3 class="title text-center">1 Reviews</h3>
                     <div class="media">
                         <a class="pull-left" href="#pablo">
                             <div class="avatar">

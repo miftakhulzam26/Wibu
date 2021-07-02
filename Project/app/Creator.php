@@ -9,4 +9,9 @@ class Creator extends Model
     //
     protected $table = 'creator';
     protected $primaryKey = 'creator_id';
+
+    public function ltitle()
+    {
+        return $this->hasMany('App\Title');
+    }
 }

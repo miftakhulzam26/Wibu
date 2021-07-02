@@ -14,7 +14,7 @@ class CreateCreator extends Migration
     public function up()
     {
         Schema::create('creator', function (Blueprint $table) {
-            $table->id('creator_id');
+            $table->id('id');
             $table->string('creator_name');
             $table->string('creator_email');
             $table->string('creator_password');
