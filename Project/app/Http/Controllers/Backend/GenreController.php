@@ -9,6 +9,10 @@ use App\Http\Controllers\Controller;
 class GenreController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware(['job','auth']);
+    }
     public function index(){
         $genre =  Genre::orderBy('id')->paginate(5);
         return view('backend.genre.index',compact('genre'));

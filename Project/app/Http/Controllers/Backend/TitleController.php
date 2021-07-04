@@ -15,6 +15,10 @@ class TitleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware(['job','auth']);
+    }
     public function index()
     {
         $title = Title::orderBy('id')->paginate(5);

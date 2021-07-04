@@ -9,6 +9,10 @@ use App\Tag;
 class TagController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware(['job','auth']);
+    }
     public function index(){
         $tag =  Tag::orderBy('id')->paginate(5);
         return view('backend.tag.index',compact('tag'));

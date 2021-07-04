@@ -29,6 +29,7 @@ Route::group(['namespace'=>'Backend'], function () {
         Route::resource('title', 'TitleController');
         Route::resource('titleg', 'TitleGenreController');
         Route::resource('titlet', 'TitleTagController');
+        Route::resource('creator', 'CreatorController');
     });
 });
 

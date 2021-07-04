@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\DB;
 
 class TitleTagController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['job','auth']);
+    }
     //
     public function index(){
         $titlet = TagTitle::orderBy('title_id')->paginate(5);
@@ -58,7 +62,7 @@ class TitleTagController extends Controller
         $titlet->save();
         return redirect()->route('titlet.index')->with('success','Tag Title has been updated successfully');
     }
-    public function destroy(TagTitle $chapter)
+    public function destroy(TagTitle $titlet)
     {
         $titlet->delete();
 
