@@ -20,6 +20,8 @@ class CreateUsers extends Migration
             $table->timestamp('verified_at')->nullable();
             $table->string('password');
             $table->string('job')->nullable();
+            $table->string('foto')->nullable();
+            $table->string('deskripsi')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

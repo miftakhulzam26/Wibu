@@ -22,11 +22,17 @@
                 <div class="row">
                     <div class="col-xs-6 col-xs-offset-3">
                        <div class="profile">
+                           @if(Auth::user()->foto)
                             <div class="avatar">
-                                <img src="{{ asset('frontend/assets/img/faces/christian.jpg') }}" alt="Circle Image" class="img-circle img-responsive img-raised">
+                                <img src="{{ Auth::user()->foto}}" alt="Circle Image" class="img-circle img-responsive img-raised">
                             </div>
+                            @else
+                            <div class="avatar">
+                                <img src="{{ asset('frontend/assets/img/faces/avatar.jpg') }}" alt="Circle Image" class="img-circle img-responsive img-raised">
+                            </div>
+                            @endif
                             <div class="name">
-                                <h3 class="title">Christian Louboutin</h3>
+                                <h3 class="title">{{ Auth::user()->name }}</h3>
                                 <br>
                                 <a href="#pablo" class="btn btn-just-icon btn-simple btn-dribbble"><i class="fa fa-dribbble"></i></a>
                                 <a href="#pablo" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
@@ -38,9 +44,11 @@
                         <button class="btn btn-fab btn-primary" rel="tooltip" title="Add New Story">
                             <i class="material-icons">add</i>
                         </button>
-                        <button class="btn btn-fab btn-primary" rel="tooltip" title="Edit Profile">
-                            <i class="material-icons">build</i>
-                        </button>
+                        <a href="{{route('profu.edit',Auth::user()->id)}}">
+                            <button class="btn btn-fab btn-primary" rel="tooltip" title="Edit Profile">
+                                <i class="material-icons">build</i>
+                            </button>
+                        </a>
                     </div>
                 </div>
 
