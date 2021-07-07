@@ -19,10 +19,10 @@
         <div class="profile-content">
             <div class="container">
 
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-xs-6 col-xs-offset-3">
                        <div class="profile">
-                           @if(Auth::user()->foto)
+                            @if(Auth::user()->foto)
                             <div class="avatar">
                                 <img src="{{ Auth::user()->foto}}" alt="Circle Image" class="img-circle img-responsive img-raised">
                             </div>
@@ -55,7 +55,7 @@
 
                 <div class="description text-center">
                     <p>An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
-                </div>
+                </div> --}}
 
                 @yield('content')
             </div>

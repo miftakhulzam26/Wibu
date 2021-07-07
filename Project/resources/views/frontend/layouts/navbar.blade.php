@@ -56,7 +56,7 @@
             <ul class="dropdown-menu dropdown-with-icons">
 
                 <li>
-                    <a href="{{ route('profu.show', Auth::user()->id) }}">
+                    <a href="{{ route('profu.index')}}">
                         <i class="material-icons">account_circle</i> My Profile
                     </a>
                 </li>
