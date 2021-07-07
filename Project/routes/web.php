@@ -29,6 +29,7 @@ Route::group(['namespace'=>'Backend'], function () {
         Route::resource('title', 'TitleController');
         Route::resource('titleg', 'TitleGenreController');
         Route::resource('titlet', 'TitleTagController');
+        Route::resource('creator', 'CreatorController');
     });
 });
 
@@ -62,9 +63,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/upload', 'UploadController@index');
 Route::post('/upload/proses', 'UploadController@store');
 
-Route::get('gdesc/{id}', 'GdescController@index');
-Route::get('tdesc/{id}', 'TdescController@index');
-Route::get('ftitle/{id}', 'App\Http\Controllers\Frontend\FtitleController@index');
+// Route::get('gdesc/{id}', 'GdescController@index');
+// Route::get('tdesc/{id}', 'TdescController@index');
+// Route::get('ftitle/{id}', 'App\Http\Controllers\Frontend\FtitleController@index');
 
 
 

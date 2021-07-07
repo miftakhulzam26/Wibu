@@ -10,6 +10,10 @@ use App\Http\Controllers\Controller;
 class ChapterController extends Controller
 {
     //
+    public function __construct()
+    {
+        $this->middleware(['job','auth']);
+    }
     public function index(){
         $chapter = Chapter::orderBy('chapter_id')->paginate(5);
         return view('backend.chapter.index', compact('chapter'));

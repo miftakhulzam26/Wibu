@@ -6,6 +6,44 @@
 
 @section('content')
 <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+       <div class="profile">
+            @if(Auth::user()->foto)
+            <div class="avatar">
+                <img src="{{ URL::to('frontend/assets/img/faces/',Auth::user()->foto) }}" alt="Circle Image" class="img-circle img-responsive img-raised">
+            </div>
+            @else
+            <div class="avatar">
+                <img src="{{ asset('frontend/assets/img/faces/avatar.jpg') }}" alt="Circle Image" class="img-circle img-responsive img-raised">
+            </div>
+            @endif
+            <div class="name">
+                <h3 class="title">{{ Auth::user()->name }}</h3>
+                <h4>{{ Auth::user()->email }}</h4>
+                <br>
+                <a href="#pablo" class="btn btn-just-icon btn-simple btn-dribbble"><i class="fa fa-dribbble"></i></a>
+                <a href="#pablo" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#pablo" class="btn btn-just-icon btn-simple btn-pinterest"><i class="fa fa-pinterest"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-2 follow">
+        <button class="btn btn-fab btn-primary" rel="tooltip" title="Add New Story">
+            <i class="material-icons">add</i>
+        </button>
+        <a href="{{route('profu.edit',$user->id)}}">
+            <button class="btn btn-fab btn-primary" rel="tooltip" title="Edit Profile">
+                <i class="material-icons">build</i>
+            </button>
+        </a>
+    </div>
+</div>
+
+
+<div class="description text-center">
+    <p>{{ Auth::user()->deskripsi }}</p>
+</div>
+<div class="row">
     <div class="col-md-6 col-md-offset-3">
         <div class="profile-tabs">
             <div class="nav-align-center">

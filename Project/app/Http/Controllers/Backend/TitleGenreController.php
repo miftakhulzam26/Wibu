@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\DB;
 
 class TitleGenreController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['job','auth']);
+    }
     //
     public function index(){
         $titleg = GenreTitle::orderBy('title_id')->paginate(5);
@@ -58,7 +62,7 @@ class TitleGenreController extends Controller
         $titleg->save();
         return redirect()->route('titleg.index')->with('success','Title Genre has been updated successfully');
     }
-    public function destroy(GenreTitle $chapter)
+    public function destroy(GenreTitle $titleg)
     {
         $titleg->delete();
 

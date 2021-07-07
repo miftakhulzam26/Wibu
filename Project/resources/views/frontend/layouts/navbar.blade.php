@@ -47,7 +47,8 @@
             </ul>
         </li>
 
-        <li class="dropdown">
+        @if(Auth::check())
+        <li class="dropdown activate">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <i class="material-icons">people</i> Profile
                 <b class="caret"></b>
@@ -55,7 +56,7 @@
             <ul class="dropdown-menu dropdown-with-icons">
 
                 <li>
-                    <a href="{{ route('profu.index') }}">
+                    <a href="{{ route('profu.index')}}">
                         <i class="material-icons">account_circle</i> My Profile
                     </a>
                 </li>
@@ -66,8 +67,31 @@
                 </li>
             </ul>
         </li>
+        <li class="activate dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="material-icons">build</i> Options
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu dropdown-with-icons">
+                <li>
+                    {{-- <a href="{{ route('logout') }}">
+                        <i class="material-icons">fingerprint</i> Logout
+                    </a> --}}
 
-        <li class="dropdown">
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                        <i class="material-icons">fingerprint</i>{{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                </li>
+            </ul>
+        </li>
+        @else
+        <li class="activate dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <i class="material-icons">build</i> Options
                 <b class="caret"></b>
@@ -83,9 +107,9 @@
                         <i class="material-icons">person_add</i> Register Page
                     </a>
                 </li>
-
             </ul>
         </li>
+        @endif
 
         <li>
             <a href="http://www.creative-tim.com/buy/material-kit-pro?ref=presentation" target="_blank" class="btn btn-white btn-simple">

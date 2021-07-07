@@ -25,7 +25,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="{{ route('user.index') }}">
+            <a class="nav-link" href="{{ route('creator.index') }}">
               <i class="material-icons">content_paste</i>
               <p>Creator</p>
             </a>
@@ -67,7 +67,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./rtl.html">
+            <a class="nav-link" href="{{ route('user.index') }}">
               <i class="material-icons">bubble_chart</i>
               <p>User</p>
             </a>
