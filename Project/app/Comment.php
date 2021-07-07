@@ -13,4 +13,14 @@ class Comment extends Model
         'creator_id',
         'content'
     ];
+
+    protected function lcomment()
+    {
+        return $this->belongsTo('App\Chapter');
+    }
+
+    protected function lreply()
+    {
+        return $this->hasMany('App\Reply');
+    }
 }

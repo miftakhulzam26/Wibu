@@ -18,6 +18,7 @@ class CreateCreator extends Migration
             $table->string('creator_name');
             $table->string('creator_email');
             $table->string('creator_password');
+            $table->string('creator_profile');
             $table->text('creator_desc');
             $table->timestamps();
         });

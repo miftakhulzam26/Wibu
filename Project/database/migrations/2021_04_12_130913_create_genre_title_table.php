@@ -19,6 +19,7 @@ class CreateGenreTitleTable extends Migration
             $table->bigInteger('genre_id')->unsigned();
             $table->foreign('title_id')->references('id')->on('title');
             $table->foreign('genre_id')->references('id')->on('genre');
+            $table->timestamps();
         });
     }
 

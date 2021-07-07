@@ -19,6 +19,7 @@ class CreateTagTitleTable extends Migration
             $table->bigInteger('tag_id')->unsigned();
             $table->foreign('title_id')->references('id')->on('title');
             $table->foreign('tag_id')->references('id')->on('tag');
+            $table->timestamps();
         });
     }
 

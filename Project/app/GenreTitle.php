@@ -8,5 +8,9 @@ class GenreTitle extends Model
 {
     //
     protected $table = 'genre_title' ;
-    protected $primaryKey = 'titlegenre_id';
+    //protected $primaryKey = 'id';
+    protected $fillable = [
+        'title_id',
+        'genre_id',
+    ];
 }

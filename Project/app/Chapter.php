@@ -8,5 +8,22 @@ class Chapter extends Model
 {
     //
     protected $table = 'chapter';
-    protected $primaryKey = 'chapter_id';
+    //migratprotected $primaryKey = 'id';
+    protected $fillable = [
+        'chapter_title',
+        'chapter_text',
+        'chapter_tts',
+        'view',
+        'title_id'
+    ];
+
+    public function lchapter()
+    {
+        return $this->belongsTo('App\Title');
+    }
+
+    public function lcomment()
+    {
+        return $this->hasMany('App\Comment');
+    }
 }
