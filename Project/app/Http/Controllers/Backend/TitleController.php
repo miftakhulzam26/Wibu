@@ -36,7 +36,7 @@ class TitleController extends Controller
     public function create()
     {
         $title = null;
-        $author = DB::table('creator')->get();
+        $author = DB::table('users')->get();
         return view('backend.title.create',compact('title','author'));
     }
 

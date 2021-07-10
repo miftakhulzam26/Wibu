@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Title;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UprofileController extends Controller
 {
@@ -17,7 +19,8 @@ class UprofileController extends Controller
     public function index()
     {
         $user = Auth::user();
-        return view('frontend.profile-page',compact('user'));
+        $novel = DB::select('select * from title where creator_id = ?', [1]);
+        return view('frontend.profile-page',compact('user','novel'));
     }
     // public function show($id)
     // {

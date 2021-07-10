@@ -96,7 +96,7 @@
                             <label for="exampleFormControlSelect1">Author</label>
                             <select class="form-control selectpicker" name="pengarang" data-style="btn btn-link" id="exampleFormControlSelect1">
                               @foreach ($author as $item)
-                              <option value="{{$item->creator_id}}">{{$item->creator_name}}</option>
+                              <option value="{{$item->id}}">{{$item->name}}</option>
                               @endforeach
                             </select>
                           </div>

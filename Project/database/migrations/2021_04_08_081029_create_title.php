@@ -21,7 +21,7 @@ class CreateTitle extends Migration
             $table->integer('favorit')->default(0);
             $table->bigInteger('creator_id')->unsigned();
             $table->timestamps();
-            $table->foreign('creator_id')->references('id')->on('creator');
+            $table->foreign('creator_id')->references('id')->on('users');
         });
     }
 

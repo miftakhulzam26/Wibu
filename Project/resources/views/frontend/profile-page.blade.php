@@ -28,9 +28,11 @@
         </div>
     </div>
     <div class="col-xs-2 follow">
-        <button class="btn btn-fab btn-primary" rel="tooltip" title="Add New Story">
-            <i class="material-icons">add</i>
-        </button>
+        <a href="{{route('utitle.create')}}">
+            <button class="btn btn-fab btn-primary" rel="tooltip" title="Add New Story">
+                <i class="material-icons">add</i>
+            </button>
+        </a>
         <a href="{{route('profu.edit',$user->id)}}">
             <button class="btn btn-fab btn-primary" rel="tooltip" title="Edit Profile">
                 <i class="material-icons">build</i>
@@ -146,12 +148,12 @@
     </div>
     <div class="tab-pane connections" id="connections">
         <div class="row">
+            @foreach($novel as $novels)
             <div class="col-md-4">
-
                 <div class="card card-background" style="background-image: url('{{ asset('frontend/assets/img/test1.jpg') }}'); width:300px;height:500px">
 
                     <div class="card-content">
-                        <h6 class="category text-info">Productivy Apps</h6>
+                        <h6 class="category text-info">{{$novels->name}}</h6>
                         <a href="#pablo">
                             <h3 class="card-title">The Best Productivity Apps on Market</h3>
                         </a>
@@ -167,116 +169,8 @@
                     </div>
                 </div>
             </div>
+            @endforeach
 
-            <div class="col-md-4">
-
-                <div class="card card-background" style="background-image: url('{{ asset('frontend/assets/img/test1.jpg') }}'); width:300px;height:500px">
-
-                    <div class="card-content">
-                        <h6 class="category text-info">Productivy Apps</h6>
-                        <a href="#pablo">
-                            <h3 class="card-title">The Best Productivity Apps on Market</h3>
-                        </a>
-                        <p class="card-description">
-                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                        </p>
-                        <a href="#pablo" class="btn btn-white btn-simple">
-                            <i class="material-icons">subject</i> Read Article
-                        </a>
-                        <a href="#pablo" class="btn btn-white btn-simple">
-                            <i class="material-icons">watch_later</i> Watch Later
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="card card-background" style="background-image: url('{{ asset('frontend/assets/img/test1.jpg') }}'); width:300px;height:500px">
-
-                    <div class="card-content">
-                        <h6 class="category text-info">Productivy Apps</h6>
-                        <a href="#pablo">
-                            <h3 class="card-title">The Best Productivity Apps on Market</h3>
-                        </a>
-                        <p class="card-description">
-                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                        </p>
-                        <a href="#pablo" class="btn btn-white btn-simple">
-                            <i class="material-icons">subject</i> Read Article
-                        </a>
-                        <a href="#pablo" class="btn btn-white btn-simple">
-                            <i class="material-icons">watch_later</i> Watch Later
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="card card-background" style="background-image: url('{{ asset('frontend/assets/img/test1.jpg') }}'); width:300px;height:500px">
-
-                    <div class="card-content">
-                        <h6 class="category text-info">Productivy Apps</h6>
-                        <a href="#pablo">
-                            <h3 class="card-title">The Best Productivity Apps on Market</h3>
-                        </a>
-                        <p class="card-description">
-                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                        </p>
-                        <a href="#pablo" class="btn btn-white btn-simple">
-                            <i class="material-icons">subject</i> Read Article
-                        </a>
-                        <a href="#pablo" class="btn btn-white btn-simple">
-                            <i class="material-icons">watch_later</i> Watch Later
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="card card-background" style="background-image: url('{{ asset('frontend/assets/img/test1.jpg') }}'); width:300px;height:500px">
-
-                    <div class="card-content">
-                        <h6 class="category text-info">Productivy Apps</h6>
-                        <a href="#pablo">
-                            <h3 class="card-title">The Best Productivity Apps on Market</h3>
-                        </a>
-                        <p class="card-description">
-                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                        </p>
-                        <a href="#pablo" class="btn btn-white btn-simple">
-                            <i class="material-icons">subject</i> Read Article
-                        </a>
-                        <a href="#pablo" class="btn btn-white btn-simple">
-                            <i class="material-icons">watch_later</i> Watch Later
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="card card-background" style="background-image: url('{{ asset('frontend/assets/img/test1.jpg') }}'); width:300px;height:500px">
-
-                    <div class="card-content">
-                        <h6 class="category text-info">Productivy Apps</h6>
-                        <a href="#pablo">
-                            <h3 class="card-title">The Best Productivity Apps on Market</h3>
-                        </a>
-                        <p class="card-description">
-                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                        </p>
-                        <a href="#pablo" class="btn btn-white btn-simple">
-                            <i class="material-icons">subject</i> Read Article
-                        </a>
-                        <a href="#pablo" class="btn btn-white btn-simple">
-                            <i class="material-icons">watch_later</i> Watch Later
-                        </a>
-                    </div>
-                </div>
-            </div>
 
 
         </div>
