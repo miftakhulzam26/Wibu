@@ -21,12 +21,12 @@
                       <input type="text" id="user_name" name="title" class="form-control">
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <!--<div class="col-md-4">
                     <div class="form-group">
                       <label class="bmd-label-floating">TTS</label>
                       <input type="text" id="user_email" name="tts" class="form-control">
                     </div>
-                  </div>
+                  </div>-->
                 </div>
                 <!--<div class="col-md-4">
                     <label class="bmd-label-floating">Profile</label>

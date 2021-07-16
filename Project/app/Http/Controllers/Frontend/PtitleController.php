@@ -22,9 +22,10 @@ class PtitleController extends Controller
     //    return view('frontend.list-title-page',['title' => $title]);
 
     $ftitle = DB::table('title')
-            ->join('creator', 'title.creator_id', '=', 'creator.creator_id')
-            ->select('title.*', 'creator.creator_name')
-            ->get();
+            ->join('users', 'title.user_id', '=', 'users.id')
+            ->select('title.*', 'users.name as userName')
+            ->paginate(5);
+
     return view('frontend.list-title-page',compact('ftitle'));
     }
 

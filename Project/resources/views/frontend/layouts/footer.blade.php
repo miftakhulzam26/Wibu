@@ -25,7 +25,7 @@
             </ul>
         </nav>
         <div class="copyright pull-right">
-            &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+            &copy; <script>document.write(new Date().getFullYear())</script>, Contact Us <i class="fa fa-heart heart"></i> by Gmail : sultanragil123@gmail.com
         </div>
     </div>
 </footer>

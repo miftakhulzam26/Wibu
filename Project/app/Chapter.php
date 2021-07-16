@@ -12,7 +12,6 @@ class Chapter extends Model
     protected $fillable = [
         'chapter_title',
         'chapter_text',
-        'chapter_tts',
         'view',
         'title_id'
     ];

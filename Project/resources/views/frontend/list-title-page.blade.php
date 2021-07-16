@@ -20,10 +20,10 @@
                 <a href="{{ route('ftitle.show', $t->id) }}">{{$t->name}}</a>
             </h4>
             <p class="card-description">
-                {{$t->sinopsis}} <a href="{{ route('ftitle.show', $t->id) }}"> Read More </a>
+                {{Str::limit($t->sinopsis,50)}} <a href="{{ route('ftitle.show', $t->id) }}"> Read More </a>
             </p>
             <p class="author">
-                Author : <a href="#pablo"><b>{{$t->creator_name}}</b></a>
+                Author : <a href="#pablo"><b>{{$t->userName}}</b></a>
             </a>
             <p class="author">
                 Genre :
@@ -42,15 +42,9 @@
             <!--
                 color-classes: "pagination-primary", "pagination-info", "pagination-success", "pagination-warning", "pagination-danger"
             -->
-                <li><a href="javascript:void(0);">1</a></li>
-                <li><a href="javascript:void(0);">...</a></li>
-                <li><a href="javascript:void(0);">5</a></li>
-                <li><a href="javascript:void(0);">6</a></li>
-                <li class="active"><a href="javascript:void(0);">7</a></li>
-                <li><a href="javascript:void(0);">8</a></li>
-                <li><a href="javascript:void(0);">9</a></li>
-                <li><a href="javascript:void(0);">...</a></li>
-                <li><a href="javascript:void(0);">12</a></li>
+                <li><a href="{!! $ftitle->links() !!}"></a></li>
+
+
             </ul>
     </div>
 

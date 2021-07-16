@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth:sanctum')->get('/api/user', function (Request $request) {
     return $request->user();
 });
 
@@ -26,6 +26,8 @@ Route::get('/', function ($id) {
 //Route::put('comment/{id}/update', 'CommentController@update');
 //Route::post('comment', 'CommmentController@create');
 //Route::delete('comment/{id}/delete', 'CommentController@delete');
+
+
 $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', function($api) {
@@ -49,12 +51,12 @@ $api->version('v1', function($api) {
         $api->put('comment/{id}/update', 'ApiCommentController@update');
         $api->delete('comment/{id}/delete', 'ApiCommentController@delete');
 
-        //Route Api Creator
-        $api->get('creator','ApiCreatorController@index');
-        $api->get('creator/{id}', 'ApiCreatorController@show');
-        $api->post('creator', 'ApiCreatorController@create');
-        $api->put('creator/{id}/update', 'ApiCreatorController@update');
-        $api->delete('creator/{id}/delete', 'ApiCreatorController@delete');
+        //Route Api User
+        $api->get('user','ApiUserController@index');
+        $api->get('user/{id}', 'ApiUserController@show');
+        $api->post('user', 'ApiUserController@create');
+        $api->put('user/{id}/update', 'ApiUserController@update');
+        $api->delete('user/{id}/delete', 'ApiUserController@delete');
 
         //Route Api Genre
         $api->get('genre','ApiGenreController@index');
@@ -104,5 +106,49 @@ $api->version('v1', function($api) {
         $api->post('tag', 'ApiTagController@create');
         $api->put('tag/{id}/update', 'ApiTagController@update');
         $api->delete('tag/{id}/delete', 'ApiTagController@delete');
+
+        //Route Api Login Logout Logout All
+        $api->post('/login', function(Request $request){
+            $data = $request->validate([
+                'email'	=> 'required',
+                'password' => 'required'
+            ]);
+
+            $user = App\User::where('email', $request->email)->first();
+
+            if (! $user || !Hash::check($request->password, $user->password)) {
+                return response([
+                    'email' => ['The provided credentials are incorrect.'],
+                ], 404);
+            }
+
+            return $user->createToken('my-token')->plainTextToken;
+
+        });
+
+        $api->post('/logout', function(Request $request){
+
+            $user = $request->user();
+            $user->currentAccessToken()->delete();
+            $respon = [
+                'status' => 'success',
+                'msg' => 'Logout successfully',
+                'errors' => null,
+                'content' => null,
+                ];
+                return response()->json($respon, 200);
+        });
+
+        $api->post('/logoutall', function(Request $request) {
+            $user = $request->user();
+            $user->tokens()->delete();
+            $respon = [
+                'status' => 'success',
+                'msg' => 'Logout successfully',
+                'errors' => null,
+                'content' => null,
+            ];
+            return response()->json($respon, 200);
+        });
     });
 });

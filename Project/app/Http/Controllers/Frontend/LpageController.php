@@ -13,12 +13,18 @@ class LpageController extends Controller
 {
     public function index()
     {
-        //$latest = DB::table('title')
-        //->join('creator', 'title.creator_id', '=', 'creator.creator_id')
-        //->join('chapter','title.id','=','chapter.title_id')
-        //->select('title.*', 'creator.creator_name','chapter.chapter.name','chapter.chapter_text')
-        //->get();
+        $popular = DB::table('title')
+        ->orderBy('favorit', 'desc')
+        ->get();
 
-        return view('frontend.landing-page');//,compact('latest'));
+        $latest = DB::table('chapter')
+        ->join('title', 'chapter.title_id', '=', 'chapter.id')
+        ->select('chapter.*', 'title.name', 'title.cover')
+        ->orderBy('created_at','asc')
+        ->paginate(10);
+
+        return view('frontend.landing-page',compact('popular','latest'));
     }
+
+
 }

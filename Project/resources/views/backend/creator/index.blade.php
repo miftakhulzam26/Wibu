@@ -52,23 +52,23 @@
                       @foreach ($creator as $item)
                       <tr>
                         <td>
-                            {{$item->creator_id}}
+                            {{$item->id}}
                         </td>
                         <td>
-                            {{$item->creator_name}}
+                            {{$item->name}}
                         </td>
                         <td>
-                            {{$item->creator_email}}
+                            {{$item->email}}
                         </td>
                         <td>
-                            {{$item->creator_desc}}
+                            {{$item->deskripsi}}
                         </td>
                         <td>
                             {{$item->created_at}}
                         </td>
                         <td class="td-actions text-right">
-                        <form action="{{ route('user.destroy',$item->creator_id) }}" method="POST">
-                          <a href="{{ route('user.edit',$item->creator_id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                        <form action="{{ route('user.destroy',$item->id) }}" method="POST">
+                          <a href="{{ route('user.edit',$item->id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
                             <i class="material-icons">edit</i></a>
                           </button>
                           @csrf

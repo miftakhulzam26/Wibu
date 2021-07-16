@@ -10,13 +10,13 @@
     <div class="section section-contacts">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
-            <h2 class="text-left title">{{$tdetail->name}} </h2>
+            <h2 class="text-left title">{{$title->name}} </h2>
             <div class="row">
               <div class="col-md-4">
                   <table class="table">
                       <tbody>
                           <tr>
-                              <img src="{{ asset('images/'.$tdetail->cover)  }}" alt="Cover Image" height="300" width="200">
+                              <img src="{{ asset('images/'.$title->cover)  }}" alt="Cover Image" height="300" width="200">
                           </tr>
                           <!--<tr>
                               <h4 class="text-left title">Status </h4>
@@ -27,13 +27,13 @@
                           <tr>
                               <h4 class="text-left title">Author </h4>
                               <p class="text-left">
-                                <a href="http://">{{$tdetail->creator_name}}</a>
+                                <a href="http://">{{$title->creator_name}}</a>
                               </p>
                           </tr>
                           <tr>
                               <h4 class="text-left title">Year </h4>
                               <p class="text-left">
-                                {{$tdetail->created_at}}
+                                {{$title->created_at}}
                               </p>
                           </tr>
                           <tr>
@@ -80,7 +80,7 @@
                               <h4 class="text-left title">Likes </h4>
                               <p class="text-left">
                                 <a href="#pablo" class="btn btn-danger btn-simple pull-left">
-                                    <i class="material-icons">favorite</i> {{$tdetail->favorit}}
+                                    <i class="material-icons">favorite</i> {{$title->favorit}}
                                 </a>
                               </p>
                           </tr>
@@ -93,7 +93,7 @@
                           <tr>
                               <h4 class="text-left title">Description </h4>
                               <p class="text-left">
-                                {{$tdetail->sinopsis}}
+                                {{$title->sinopsis}}
                               </p>
                           </tr>
                           <tr>

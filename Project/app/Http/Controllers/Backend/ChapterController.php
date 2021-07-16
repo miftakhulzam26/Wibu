@@ -15,7 +15,7 @@ class ChapterController extends Controller
         $this->middleware(['job','auth']);
     }
     public function index(){
-        $chapter = Chapter::orderBy('chapter_id')->paginate(5);
+        $chapter = Chapter::orderBy('id')->paginate(5);
         return view('backend.chapter.index', compact('chapter'));
     }
     public function create(){
@@ -27,14 +27,14 @@ class ChapterController extends Controller
         $request->validate([
             'title' => 'required',
             'text' => 'required',
-            'tts' => 'required',
+            //'tts' => 'required',
             'title_id' => 'required'
         ]);
 
         $chapter = new Chapter;
         $chapter->chapter_title = $request->title;
         $chapter->chapter_text = $request->text;
-        $chapter->chapter_tts = $request->tts;
+        //$chapter->chapter_tts = $request->tts;
         $chapter->title_id = $request->title_id;
         $chapter->save();
         return redirect()->route('chapter.index')->with('success','Chapter has been created successfully.');
@@ -46,13 +46,13 @@ class ChapterController extends Controller
         $request->validate([
             'title' => 'required',
             'text' => 'required',
-            'tts' => 'required',
+            //'tts' => 'required',
             'title_id' => 'required'
         ]);
         $chapter = Chapter::find($id);
         $chapter->chapter_title = $request->title;
         $chapter->chapter_text = $request->text;
-        $chapter->chapter_tts = $request->tts;
+        //$chapter->chapter_tts = $request->tts;
         $chapter->title_id = $request->title_id;
         $chapter->save();
         return redirect()->route('chapter.index')->with('success','Chapter has been updated successfully');

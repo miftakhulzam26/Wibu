@@ -12,10 +12,12 @@ class FtitleController extends Controller
     public function index()
     {
         // $fgenre = DB::table('genre')->get();
-        $tdetail = Title::all();
-        return view('frontend.list-title-page',compact('tdetail'));
+        $title = Title::all();
+        return view('frontend.title-page',compact('title'));
     }
-    public function show(Title $tdetail){
-        return view('frontend.title-page', compact('tdetail'));
+    public function show(Title $title){
+
+        $title = Title::find($title);
+        return view('frontend.title-page', compact('title'));
     }
 }

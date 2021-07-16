@@ -12,6 +12,10 @@ use App\Tag;
 
 use App\Title;
 
+use App\TagTitle;
+
+use App\GenreTitle;
+
 class SfinderController extends Controller
 {
     public function index()

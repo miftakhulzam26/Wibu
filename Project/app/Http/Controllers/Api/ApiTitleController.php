@@ -93,8 +93,8 @@ class ApiTitleController extends Controller
 
         return response()->json([
             'status' => 'OK',
-            'message' => 'Data Tag Berhasil Dihapus',
-            'data' => $tag
+            'message' => 'Data Title Berhasil Dihapus',
+            'data' => $title
         ],201);
     }
 }
