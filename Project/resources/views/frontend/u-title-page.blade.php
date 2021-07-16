@@ -33,14 +33,15 @@
 <div class="tab-content">
     <div class="tab-pane active work" id="work">
         <div class="row">
+
             <div class="col-md-7 col-md-offset-1">
-              <h2 class="text-left title">Red Planet -Der Rote Planet- </h2>
+              <h2 class="text-left title">{{$novel->name}}</h2>
               <div class="row">
               <div class="col-md-4">
                   <table class="table">
                       <tbody>
                           <tr>
-                              <img src="{{ asset('img/frontend/cover/test1.jpg') }}" alt="Cover Image" height="300" width="200">
+                              <img src="{{ URL::to('frontend/assets/img/novel/'.$novel->cover) }}" alt="Cover Image" height="300" width="200">
                           </tr>
                           <tr>
                               <h4 class="text-left title">Status </h4>
@@ -49,10 +50,12 @@
                               </p>
                           </tr>
                           <tr>
+                            @foreach($user as $users)
                               <h4 class="text-left title">Author </h4>
                               <p class="text-left">
-                                <a href="http://">Robert A. Heinlein</a>
+                                <a href="http://">{{$users->name}}</a>
                               </p>
+                            @endforeach
                           </tr>
                           <tr>
                               <h4 class="text-left title">Year </h4>
@@ -124,9 +127,9 @@
                   <table class="table">
                       <tbody>
                           <tr>
-                              <h4 class="text-left title">Description </h4>
+                              <h4 class="text-left title">Sinopsis </h4>
                               <p class="text-left">
-                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend massa lorem, nec tristique velit rhoncus volutpat. Ut posuere massa tellus, luctus vestibulum ligula ultricies et. Maecenas finibus sem a nisl mattis, sed lobortis nisl porttitor. Nam consequat, neque nec aliquam sollicitudin, ipsum urna placerat neque, ac mattis eros purus ut turpis. Donec vel rhoncus est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Etiam in consequat velit, et efficitur diam. Proin posuere varius condimentum. Fusce mauris ipsum, venenatis sit amet ipsum sit amet, ultricies faucibus odio. Suspendisse purus ante, lobortis nec aliquam vel, condimentum quis urna.
+                                  {{$novel->sinopsis}}
                               </p>
                           </tr>
                           <tr>
@@ -143,12 +146,13 @@
                                     </th>
                                   </thead>
                                   <tbody>
+                                      @foreach($chapter as $chapters)
                                       <tr>
                                          <td class="text-left">
-                                              20XX/XX/XX
+                                              {{$chapters->created_at}}
                                          </td>
                                          <td class="text-center">
-                                              Chapter 3
+                                              {{$chapters->chapter_title}}
                                          </td>
                                          <td class="td-actions text-right">
                                             <button type="button" rel="tooltip" class="btn btn-info">
@@ -162,44 +166,7 @@
                                             </button>
                                         </td>
                                       </tr>
-                                      <tr>
-                                          <td class="text-left">
-                                              20XX/XX/XX
-                                          </td>
-                                          <td class="text-center">
-                                              Chapter 2
-                                          </td>
-                                          <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" class="btn btn-info">
-                                                <i class="material-icons">person</i>
-                                            </button>
-                                            <button type="button" rel="tooltip" class="btn btn-success">
-                                                <i class="material-icons">edit</i>
-                                            </button>
-                                            <button type="button" rel="tooltip" class="btn btn-danger">
-                                                <i class="material-icons">close</i>
-                                            </button>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                          <td class="text-left">
-                                              20XX/XX/XX
-                                          </td>
-                                          <td class="text-center">
-                                              Chapter 1
-                                          </td>
-                                          <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" class="btn btn-info">
-                                                <i class="material-icons">person</i>
-                                            </button>
-                                            <button type="button" rel="tooltip" class="btn btn-success">
-                                                <i class="material-icons">edit</i>
-                                            </button>
-                                            <button type="button" rel="tooltip" class="btn btn-danger">
-                                                <i class="material-icons">close</i>
-                                            </button>
-                                        </td>
-                                        </tr>
+                                      @endforeach
                                   </tbody>
                                 </table>
                           </tr>

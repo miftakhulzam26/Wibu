@@ -56,7 +56,7 @@
                       @foreach ($titleg as $item)
                       <tr>
                         <td>
-                            {{$item->titlegenre_id}}
+                            {{$item->id}}
                         </td>
                         <td>
                             {{$item->title_id}}
@@ -80,8 +80,8 @@
                             {{$item->updated_at}}
                         </td>-->
                         <td class="td-actions text-right">
-                        <form action="{{ route('titleg.destroy',$item->titlegenre_id) }}" method="POST">
-                          <a href="{{ route('titleg.edit',$item->titlegenre_id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                        <form action="{{ route('titleg.destroy',$item->id) }}" method="POST">
+                          <a href="{{ route('titleg.edit',$item->id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
                             <i class="material-icons">edit</i></a>
                           </button>
                           @csrf

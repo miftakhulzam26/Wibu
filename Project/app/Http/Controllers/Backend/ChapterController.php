@@ -15,7 +15,7 @@ class ChapterController extends Controller
         $this->middleware(['job','auth']);
     }
     public function index(){
-        $chapter = Chapter::orderBy('chapter_id')->paginate(5);
+        $chapter = Chapter::orderBy('id')->paginate(5);
         return view('backend.chapter.index', compact('chapter'));
     }
     public function create(){

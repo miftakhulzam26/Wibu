@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Title;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UtitleController extends Controller
 {
@@ -33,7 +35,7 @@ class UtitleController extends Controller
         $nama_file      = $file->getClientOriginalName();
 
         //memindahkan file ke folder tujuan
-        $file->move('images',$file->getClientOriginalName());
+        $file->move('frontend/assets/img/novel/',$file->getClientOriginalName());
 
         $post = new Title;
 
@@ -48,5 +50,13 @@ class UtitleController extends Controller
 
 
         return redirect()->route('utitle.index');
+    }
+    public function show($id)
+    {
+        $novel = Title::find($id);
+        $user = DB::select('select * from users where id = ?', [$novel->creator_id]);
+        $chapter = DB::select('select * from chapter where id = ?', [$novel->id]);
+        $genre = DB::select('select * from genre_title where title_id = ?', [$novel->id]);
+        return view('frontend.u-title-page',compact('novel','user','chapter','genre'));
     }
 }

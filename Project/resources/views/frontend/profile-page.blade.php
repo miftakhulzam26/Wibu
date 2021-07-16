@@ -150,18 +150,18 @@
         <div class="row">
             @foreach($novel as $novels)
             <div class="col-md-4">
-                <div class="card card-background" style="background-image: url('{{ asset('frontend/assets/img/test1.jpg') }}'); width:300px;height:500px">
+                <div class="card card-background" style="background-image: url('{{ URL::to('frontend/assets/img/novel/'.$novels->cover) }}'); width:300px;height:500px">
 
                     <div class="card-content">
                         <h6 class="category text-info">{{$novels->name}}</h6>
-                        <a href="#pablo">
-                            <h3 class="card-title">The Best Productivity Apps on Market</h3>
+                        <a href="{{route('utitle.show',$novels->id)}}">
+                            <h3 class="card-title">{{$novels->name}}</h3>
                         </a>
                         <p class="card-description">
-                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                            {{$novels->sinopsis}}.....
                         </p>
-                        <a href="#pablo" class="btn btn-white btn-simple">
-                            <i class="material-icons">subject</i> Read Article
+                        <a href="{{route('utitle.show',$novels->id)}}" class="btn btn-white btn-simple">
+                            <i class="material-icons">subject</i> Read Novel
                         </a>
                         <a href="#pablo" class="btn btn-white btn-simple">
                             <i class="material-icons">watch_later</i> Watch Later

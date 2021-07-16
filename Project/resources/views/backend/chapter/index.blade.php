@@ -55,7 +55,7 @@
                       @foreach ($chapter as $item)
                       <tr>
                         <td>
-                            {{$item->chapter_id}}
+                            {{$item->id}}
                         </td>
                         <td>
                             {{$item->chapter_title}}
@@ -76,8 +76,8 @@
                             {{$item->updated_at}}
                         </td>
                         <td class="td-actions text-right">
-                        <form action="{{ route('chapter.destroy',$item->chapter_id) }}" method="POST">
-                          <a href="{{ route('chapter.edit',$item->chapter_id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                        <form action="{{ route('chapter.destroy',$item->id) }}" method="POST">
+                          <a href="{{ route('chapter.edit',$item->id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
                             <i class="material-icons">edit</i></a>
                           </button>
                           @csrf
