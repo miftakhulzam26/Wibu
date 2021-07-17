@@ -20,7 +20,7 @@
                 <a href="{{ route('ftitle.show', $t->id) }}">{{$t->name}}</a>
             </h4>
             <p class="card-description">
-                {{Str::limit($t->sinopsis,50)}} <a href="{{ route('ftitle.show', $t->id) }}"> Read More </a>
+                {{Str::limit($t->sinopsis,50)}} <a href="{{ url('ftitle/' . $t->id) }}"> Read More </a>
             </p>
             <p class="author">
                 Author : <a href="#pablo"><b>{{$t->userName}}</b></a>

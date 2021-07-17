@@ -72,6 +72,12 @@
               <p>Admin</p>
             </a>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{{ route('carousel.index') }}">
+              <i class="material-icons">bubble_chart</i>
+              <p>Carousel</p>
+            </a>
+          </li>
         </ul>
       </div>
     </div>

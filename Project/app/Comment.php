@@ -11,7 +11,8 @@ class Comment extends Model
     protected $fillable = [
         'chapter_id',
         'creator_id',
-        'content'
+        'content',
+        'like'
     ];
 
     protected function lcomment()

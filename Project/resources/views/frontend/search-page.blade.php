@@ -48,20 +48,6 @@
 
 
                 </div>
-                <div class="features">
-                    <h3>Status </h3>
-                    <p class="text-muted">
-                        Choose the status that want to be included.
-                    </p>
-                    <div class="col-lg-5 col-md-6 col-sm-3">
-                        <select class="selectpicker" data-style="select-with-transition" multiple title="Choose Status" data-size="7">
-                            <!--<option disabled> Choose Status</option>-->
-                            <option value="Completed">Completed </option>
-                            <option value="Hiatus">Hiatus</option>
-                            <option value="Ongoing">Ongoing</option>
-                        </select>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

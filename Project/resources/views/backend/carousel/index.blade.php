@@ -17,8 +17,8 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header card-header-info">
-              <h4 class="card-title ">Tag Title Table</h4>
-              <p class="card-category"> Tabel Data Tag Title</p>
+              <h4 class="card-title ">Carousel Table</h4>
+              <p class="card-category"> Carousel Tag Title</p>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -28,10 +28,22 @@
                       ID
                     </th>
                     <th>
-                      Title Name
+                      Image
                     </th>
                     <th>
-                      Tag Name
+                      Title
+                    </th>
+                    <th>
+                      Text
+                    </th>
+                    <th>
+                      Link
+                    </th>
+                    <th>
+                      Created at
+                    </th>
+                    <th>
+                      Updated at
                     </th>
                     <!--<th>
                       Sinopsis
@@ -53,35 +65,38 @@
                     </th>
                   </thead>
                   <tbody>
-                      @foreach ($titlet as $item)
+                      @foreach ($carousel as $item)
                       <tr>
                         <td>
-                            {{$item->titletag_id}}
+                            {{$item->id}}
                         </td>
                         <td>
-                            {{$item->title_id}}
+                            <img class="img img-raised" src="{{ asset('images/'.$item->image)  }}" width="300px" height="200px"/>
                         </td>
                         <td>
-                            {{$item->tag_id}}
-                        </td>
-                        <!--<td>
-                            {{$item->sinopsis}}
+                            {{$item->title}}
                         </td>
                         <td>
-                            {{$item->favorit}}
+                            {{$item->text}}
                         </td>
                         <td>
-                            {{$item->creator_id}}
+                            {{$item->link}}
                         </td>
                         <td>
                             {{$item->created_at}}
                         </td>
                         <td>
                             {{$item->updated_at}}
+                        </td>
+                        <!--<td>
+                            {{$item->created_at}}
+                        </td>
+                        <td>
+                            {{$item->updated_at}}
                         </td>-->
                         <td class="td-actions text-right">
-                        <form action="{{ route('titlet.destroy',$item->id) }}" method="POST">
-                          <a href="{{ route('titlet.edit',$item->id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                        <form action="{{ route('carousel.destroy',$item->id) }}" method="POST">
+                          <a href="{{ route('carousel.edit',$item->id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
                             <i class="material-icons">edit</i></a>
                           </button>
                           @csrf
@@ -95,11 +110,11 @@
                       @endforeach
                   </tbody>
                 </table>
-                {!! $titlet->links() !!}
+                {!! $carousel->links() !!}
               </div>
             </div>
           </div>
-          <a href="{{ route('titlet.create') }}"><button type="button" class="btn btn-info">Tambah</button></a>
+          <a href="{{ route('carousel.create') }}"><button type="button" class="btn btn-info">Tambah</button></a>
         </div>
       </div>
     </div>

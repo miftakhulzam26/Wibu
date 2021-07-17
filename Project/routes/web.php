@@ -30,6 +30,7 @@ Route::group(['namespace'=>'Backend'], function () {
         Route::resource('titleg', 'TitleGenreController');
         Route::resource('titlet', 'TitleTagController');
         Route::resource('creator', 'CreatorController');
+        Route::resource('carousel', 'CarouselController');
     });
 });
 
@@ -53,13 +54,12 @@ Route::group(['namespace'=>'Frontend'], function () {
 
 
 
-
 });
 // Route::resource('posts', PostCRUDController::class);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('ftitle/{id}', 'FtitleController@displayDetail')->name('displayDetail');
 Route::get('/upload', 'UploadController@index');
 Route::post('/upload/proses', 'UploadController@store');
 

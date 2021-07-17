@@ -20,6 +20,7 @@ class CreateCommentTable extends Migration
             $table->foreign('chapter_id')->references('id')->on('chapter');
             $table->foreign('creator_id')->references('id')->on('creator');
             $table->string('content');
+            $table->integer('like')->nullable()->default(0);
             $table->timestamps();
         });
     }

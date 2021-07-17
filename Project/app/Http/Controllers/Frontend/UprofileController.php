@@ -19,7 +19,7 @@ class UprofileController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $novel = DB::select('select * from title where creator_id = ?', [Auth::user()->id]);
+        $novel = DB::select('select * from title where user_id = ?', [Auth::user()->id]);
         return view('frontend.profile-page',compact('user','novel'));
     }
     // public function show($id)

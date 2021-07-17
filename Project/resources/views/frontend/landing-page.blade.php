@@ -23,7 +23,39 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
-                <div class="item active">
+                @foreach ($carousel as $item)
+                    <div class="item {{$item->id == 1 ? 'active' : '' }}">
+                        <div class="page-header header-filter" style="background-image: url('{{ asset('images/'.$item->image) }}');">
+
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 text-left">
+                                        <h1 class="title">{{$item->title}}</h1>
+                                        <h4>{{$item->text}}</h4>
+                                        <br />
+
+                                        <div class="buttons">
+                                            <a href="{{ url('$item->link') }}" class="btn btn-primary btn-lg">
+                                                Read More
+                                            </a>
+                                            <!--<a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                            <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                                <i class="fa fa-facebook-square"></i>
+                                            </a>
+                                            <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                                <i class="fa fa-get-pocket"></i>
+                                            </a>-->
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                <!--<div class="item active">
                     <div class="page-header header-filter" style="background-image: url('{{ asset('images/carousel1.jpg') }}');">
 
                         <div class="container">
@@ -37,7 +69,7 @@
                                         <a href="#pablo" class="btn btn-primary btn-lg">
                                             Read More
                                         </a>
-                                        <!--<a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                         <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
@@ -45,14 +77,13 @@
                                         </a>
                                         <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
                                             <i class="fa fa-get-pocket"></i>
-                                        </a>-->
+                                        </a>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="item">
                     <div class="page-header header-filter" style="background-image: url('{{ asset('images/carousel2.jpg') }}');">
@@ -68,7 +99,7 @@
                                         <a href="#pablo" class="btn btn-primary btn-lg">
                                             Read More
                                         </a>
-                                        <!--<a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                         <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
@@ -76,7 +107,7 @@
                                         </a>
                                         <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
                                             <i class="fa fa-get-pocket"></i>
-                                        </a>-->
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -85,7 +116,6 @@
                     </div>
 
                 </div>
-
                 <div class="item">
                     <div class="page-header header-filter" style="background-image: url('{{ asset('images/carousel3.jpg') }}');">
 
@@ -100,7 +130,7 @@
                                         <a href="#pablo" class="btn btn-primary btn-lg">
                                             Read More
                                         </a>
-                                        <!--<a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
+                                        <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
                                             <i class="fa fa-twitter"></i>
                                         </a>
                                         <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
@@ -108,7 +138,7 @@
                                         </a>
                                         <a href="#pablo" class="btn btn-just-icon btn-white btn-simple btn-lg">
                                             <i class="fa fa-get-pocket"></i>
-                                        </a>-->
+                                        </a>
                                     </div>
 
                                 </div>
@@ -117,7 +147,7 @@
 
                     </div>
 
-                </div>
+                </div>-->
 
             </div>
 

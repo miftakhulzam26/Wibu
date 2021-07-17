@@ -27,7 +27,7 @@
                           <tr>
                               <h4 class="text-left title">Author </h4>
                               <p class="text-left">
-                                <a href="http://">{{$title->creator_name}}</a>
+                                <a href="http://">{{$title->user_id}}</a>
                               </p>
                           </tr>
                           <tr>
@@ -56,32 +56,29 @@
                                         <span class="label label-default">Default</span>
                                       </div>
                                   </div>-->
+                                  @foreach ($genre as $item)
+                                  <a href="http://">{{$item->genre_name}}</a>
+                                  @endforeach
 
-                                    <a href="http://">Action</a>
-                                    <a href="http://">Romance</a>
-                                    <a href="http://">Sci-fi</a>
-                                    <a href="http://">Comedy</a>
-                                    <a href="http://">Default</a>
-                                    <a href="http://">Default</a>
-                                    <a href="http://">Default</a>
+
                               </p>
                           </tr>
                           <tr>
                               <h4 class="text-left title">Tag </h4>
                               <p class="text-left">
-                                <a href="http://">Action</a>
-                                <a href="http://">Romance</a>
-                                <a href="http://">Sci-fi</a>
-                                <a href="http://">Comedy</a>
-                                <a href="http://">Default</a>
+                                @foreach ($tag as $item)
+                                  <a href="http://">{{$item->tag_name}}</a>
+                                @endforeach
                               </p>
                           </tr>
                           <tr>
                               <h4 class="text-left title">Likes </h4>
                               <p class="text-left">
-                                <a href="#pablo" class="btn btn-danger btn-simple pull-left">
-                                    <i class="material-icons">favorite</i> {{$title->favorit}}
-                                </a>
+
+                                    <a href="#pablo" class="btn btn-danger btn pull-left">
+                                        <i class="material-icons">favorite</i> {{$title->favorit}}
+                                    </a>
+
                               </p>
                           </tr>
                       </tbody>
@@ -110,58 +107,26 @@
                                     </th>
                                   </thead>
                                   <tbody>
-                                      <tr>
-                                         <td>
-                                              20XX/XX/XX
-                                         </td>
-                                         <td>
-                                              Chapter 3
-                                         </td>
-                                         <td cl>
-                                            <a href="http://">Read</a>
-                                         </td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              20XX/XX/XX
-                                          </td>
-                                          <td>
-                                              Chapter 2
-                                          </td>
-                                          <td>
-                                            <a href="http://">Read</a>
-                                          </td>
-                                      </tr>
-                                      <tr>
-                                          <td>
-                                              20XX/XX/XX
-                                          </td>
-                                          <td>
-                                              Chapter 1
-                                          </td>
-                                          <td>
-                                            <a href="http://">Read</a>
-                                          </td>
-                                        </tr>
+                                        @foreach ($chapter as $item)
+                                        <tr>
+                                            <td>
+                                                 {{$item->created_at}}
+                                            </td>
+                                            <td>
+                                                {{$item->chapter_title}}
+                                            </td>
+                                            <td cl>
+                                               <a href="{{ url('fchapter/' . $item->id) }}">Read</a>
+                                            </td>
+                                         </tr>
+                                        @endforeach
+
                                   </tbody>
                                 </table>
+                                {!! $chapter->links() !!}
                           </tr>
                       </tbody>
                   </table>
-                  <ul class="pagination pagination-primary justify-content-center">
-                    <!--
-                        color-classes: "pagination-primary", "pagination-info", "pagination-success", "pagination-warning", "pagination-danger"
-                    -->
-                        <li><a href="javascript:void(0);">1</a></li>
-                        <li><a href="javascript:void(0);">...</a></li>
-                        <li><a href="javascript:void(0);">5</a></li>
-                        <li><a href="javascript:void(0);">6</a></li>
-                        <li class="active"><a href="javascript:void(0);">7</a></li>
-                        <li><a href="javascript:void(0);">8</a></li>
-                        <li><a href="javascript:void(0);">9</a></li>
-                        <li><a href="javascript:void(0);">...</a></li>
-                        <li><a href="javascript:void(0);">12</a></li>
-                </ul>
               </div>
               <button class="btn btn-fab btn-primary" rel="tooltip" title="Add to Bookmark">
                 <i class="material-icons">add</i>
