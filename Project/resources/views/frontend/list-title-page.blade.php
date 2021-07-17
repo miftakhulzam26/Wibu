@@ -17,7 +17,7 @@
         <div class="col-md-6">
             <!--<h6 class="category text-info">Enterprise</h6>-->
             <h4 class="card-title">
-                <a href="{{ route('ftitle.show', $t->id) }}">{{$t->name}}</a>
+                <a href="{{ url('ftitle/' . $t->id) }}">{{$t->name}}</a>
             </h4>
             <p class="card-description">
                 {{Str::limit($t->sinopsis,50)}} <a href="{{ url('ftitle/' . $t->id) }}"> Read More </a>
