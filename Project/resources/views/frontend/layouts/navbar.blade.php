@@ -112,7 +112,7 @@
         @endif
 
         <li>
-            <a href="http://www.creative-tim.com/buy/material-kit-pro?ref=presentation" target="_blank" class="btn btn-white btn-simple">
+            <a href="https://drive.google.com/drive/folders/1ZvueQ9p5q-ORQPy8MGy73a6OOPi5QJLI?usp=sharing" target="_blank" class="btn btn-white btn-simple">
                 <i class="material-icons">unarchive</i> Download
             </a>
         </li>
