@@ -55,7 +55,7 @@ class UtitleController extends Controller
     {
         $novel = Title::find($id);
         $user = DB::select('select * from users where id = ?', [$novel->creator_id]);
-        $chapter = DB::select('select * from chapter where id = ?', [$novel->id]);
+        $chapter = DB::select('select * from chapter where title_id = ?', [$novel->id]);
         $genre = DB::select('select * from genre_title where title_id = ?', [$novel->id]);
         return view('frontend.u-title-page',compact('novel','user','chapter','genre'));
     }

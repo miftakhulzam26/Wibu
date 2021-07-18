@@ -56,7 +56,7 @@
                       @foreach ($titlet as $item)
                       <tr>
                         <td>
-                            {{$item->titletag_id}}
+                            {{$item->id}}
                         </td>
                         <td>
                             {{$item->title_id}}

@@ -9,13 +9,15 @@
             <div class="col-md">
                 <p class="description">You can add new chapter for your novel here.<br><br>
                 </p>
-                <form action="{{ route('addc.store')}}" method="POST" enctype="multipart/form-data">
-                    {!! csrf_field() !!}
-                    <input type="hidden" name="title_id" id="chapter_id" value="{{$novel->id}}" >
+                <form action="{{ route('addc.update',$chapter->id) }}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <input type="hidden" name="id" id="chapter_id" value="{{$chapter->id}}" >
+                    <input type="hidden" name="title_id" id="chapter_id" value="{{$chapter->title_id}}" >
                     <input type="hidden" name="chapter_read_counter" id="chapter_read_counter" value="0">
                     <div class="form-group label-floating">
                         <label class="control-label">Chapter Title</label>
-                        <input type="text" name="title" value="" class="form-control">
+                        <input type="text" name="title" value="{{$chapter->chapter_title}}" class="form-control">
                     </div>
                     {{-- <div class="form-group label-floating">
                         <label class="control-label">Email address</label>
@@ -27,7 +29,7 @@
                     </div> --}}
                     <div class="form-group label-floating">
                         <label class="control-label">Chapter Text</label>
-                        <textarea id="edit" name="text"></textarea>
+                        <textarea id="edit" name="text">{{$chapter->chapter_text}}</textarea>
                     </div>
                     <div class="submit text-center">
                         <button type="submit" class="btn btn-primary btn-raised btn-round" >Add Chapter</button>
@@ -73,22 +75,10 @@
 <script type="text/javascript" src="{{asset('froala/js/plugins/inline_style.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('froala/js/plugins/save.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('froala/js/plugins/fullscreen.min.js')}}"></script>
-  {{-- <script>
+  <script>
     (function () {
       new FroalaEditor("#edit", {
         tabSpaces: 1
-      })
-    })()
-
-  </script> --}}
-  <script>
-    (function() {
-      new FroalaEditor("#edit", {
-        events: {
-          contentChanged: function () {
-            $('#preview').html(this.html.get());
-          }
-        }
       })
     })()
   </script>

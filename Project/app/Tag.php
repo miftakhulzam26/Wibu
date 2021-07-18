@@ -13,7 +13,8 @@ class Tag extends Model
         'tag_desc'
     ];
 
-    public function ltag()
+
+    public function title()
     {
         return $this->belongsToMany('App\Title');
     }
