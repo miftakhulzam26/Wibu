@@ -41,7 +41,7 @@
                   <table class="table">
                       <tbody>
                           <tr>
-                              <img src="{{ URL::to('frontend/assets/img/novel/'.$novel->cover) }}" alt="Cover Image" height="300" width="200">
+                              <img src="{{ URL::to('images/'.$novel->cover) }}" alt="Cover Image" height="300" width="200">
                           </tr>
                           <tr>
                               <h4 class="text-left title">Status </h4>
@@ -60,7 +60,7 @@
                           <tr>
                               <h4 class="text-left title">Year </h4>
                               <p class="text-left">
-                                20XX
+                                {{$users->created_at}}
                               </p>
                           </tr>
                           <tr>
@@ -182,23 +182,11 @@
                                       @endforeach
                                   </tbody>
                                 </table>
+
                           </tr>
                       </tbody>
+
                   </table>
-                  <ul class="pagination pagination-primary justify-content-center">
-                    <!--
-                        color-classes: "pagination-primary", "pagination-info", "pagination-success", "pagination-warning", "pagination-danger"
-                    -->
-                        <li><a href="javascript:void(0);">1</a></li>
-                        <li><a href="javascript:void(0);">...</a></li>
-                        <li><a href="javascript:void(0);">5</a></li>
-                        <li><a href="javascript:void(0);">6</a></li>
-                        <li class="active"><a href="javascript:void(0);">7</a></li>
-                        <li><a href="javascript:void(0);">8</a></li>
-                        <li><a href="javascript:void(0);">9</a></li>
-                        <li><a href="javascript:void(0);">...</a></li>
-                        <li><a href="javascript:void(0);">12</a></li>
-                </ul>
 
               </div>
               <a href="{{url('/ad-chapter',$novel->id)}}">

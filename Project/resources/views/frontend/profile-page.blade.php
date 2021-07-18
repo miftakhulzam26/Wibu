@@ -19,11 +19,12 @@
             @endif
             <div class="name">
                 <h3 class="title">{{ Auth::user()->name }}</h3>
-                <h4>{{ Auth::user()->email }}</h4>
+                <h4></h4>
                 <br>
-                <a href="#pablo" class="btn btn-just-icon btn-simple btn-dribbble"><i class="fa fa-dribbble"></i></a>
+                <!--<a href="#pablo" class="btn btn-just-icon btn-simple btn-dribbble"><i class="fa fa-dribbble"></i></a>
                 <a href="#pablo" class="btn btn-just-icon btn-simple btn-twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#pablo" class="btn btn-just-icon btn-simple btn-pinterest"><i class="fa fa-pinterest"></i></a>
+                <a href="#pablo" class="btn btn-just-icon btn-simple btn-pinterest"><i class="fa fa-pinterest"></i></a>-->
+                {{ Auth::user()->email }}
             </div>
         </div>
     </div>
@@ -150,7 +151,7 @@
         <div class="row">
             @foreach($novel as $novels)
             <div class="col-md-4">
-                <div class="card card-background" style="background-image: url('{{ URL::to('frontend/assets/img/novel/'.$novels->cover) }}'); width:300px;height:500px">
+                <div class="card card-background" style="background-image: url('{{ URL::to('images/'.$novels->cover) }}'); width:300px;height:500px">
 
                     <div class="card-content">
                         <h6 class="category text-info">{{$novels->name}}</h6>
@@ -163,9 +164,9 @@
                         <a href="{{route('utitle.show',$novels->id)}}" class="btn btn-white btn-simple">
                             <i class="material-icons">subject</i> Read Novel
                         </a>
-                        <a href="#pablo" class="btn btn-white btn-simple">
+                        <!--<a href="#pablo" class="btn btn-white btn-simple">
                             <i class="material-icons">watch_later</i> Watch Later
-                        </a>
+                        </a>-->
                     </div>
                 </div>
             </div>

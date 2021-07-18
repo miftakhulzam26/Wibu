@@ -35,7 +35,7 @@ class UtitleController extends Controller
         $nama_file      = $file->getClientOriginalName();
 
         //memindahkan file ke folder tujuan
-        $file->move('frontend/assets/img/novel/',$file->getClientOriginalName());
+        $file->move('images/',$file->getClientOriginalName());
 
         $post = new Title;
 
@@ -43,18 +43,18 @@ class UtitleController extends Controller
         $post->favorit = $request->favorit;
         $post->sinopsis = $request->sinopsis;
         $post->cover = $nama_file;
-        $post->creator_id = $request->pengarang;
+        $post->user_id = $request->pengarang;
 
 
         $post->save();
 
 
-        return redirect()->route('utitle.index');
+        return redirect()->route('profu.index',compact('novel'));
     }
     public function show($id)
     {
         $novel = Title::find($id);
-        $user = DB::select('select * from users where id = ?', [$novel->creator_id]);
+        $user = DB::select('select * from users where id = ?', [$novel->user_id]);
         $chapter = DB::select('select * from chapter where title_id = ?', [$novel->id]);
         $genre = DB::select('select * from genre_title where title_id = ?', [$novel->id]);
         return view('frontend.u-title-page',compact('novel','user','chapter','genre'));

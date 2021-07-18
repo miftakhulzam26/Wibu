@@ -250,7 +250,7 @@
                                         <a href="{{ url('fchapter/' . $item->chapterId) }}">{{ $item->chapter_title}}</a>
                                     </h4>
                                     <p class="card-description">
-                                        {{Str::limit($item->chapter_text,40)}}
+                                        {{Str::limit(strip_tags($item->chapter_text,40))}}
                                     </p>
                                     <div class="footer">
                                         <div class="author">

@@ -61,7 +61,7 @@
                             {{$item->chapter_title}}
                         </td>
                         <td>
-                            {{Str::limit($item->chapter_text,20)}}
+                            {{Str::limit(strip_tags($item->chapter_text,20))}}
                         </td>
                         <!--<td>
                             {{$item->chapter_tts}}
