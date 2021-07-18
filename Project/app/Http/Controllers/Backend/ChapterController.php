@@ -42,6 +42,13 @@ class ChapterController extends Controller
     public function edit(Chapter $chapter){
         return view('backend.chapter.edit',compact('chapter'));
     }
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\post  $post
+     * @return \Illuminate\Http\Response
+     */
     public function update(Request $request, $id){
         $request->validate([
             'title' => 'required',
@@ -49,12 +56,12 @@ class ChapterController extends Controller
             //'tts' => 'required',
             'title_id' => 'required'
         ]);
-        $chapter = Chapter::find($id);
-        $chapter->chapter_title = $request->title;
-        $chapter->chapter_text = $request->text;
+        $post = Chapter::find($id);
+        $post->chapter_title = $request->title;
+        $post->chapter_text = $request->text;
         //$chapter->chapter_tts = $request->tts;
-        $chapter->title_id = $request->title_id;
-        $chapter->save();
+        $post->title_id = $request->title_id;
+        $post->save();
         return redirect()->route('chapter.index')->with('success','Chapter has been updated successfully');
     }
     public function destroy(Chapter $chapter)

@@ -83,14 +83,15 @@
                                         <span class="label label-default">Default</span>
                                       </div>
                                   </div>-->
-
-                                    <a href="http://">Action</a>
-                                    <a href="http://">Romance</a>
+                                @foreach($novel->genre as $g)
+                                    <a href="http://">{{$g->genre_name}}</a>
+                                    {{-- <a href="http://">Romance</a>
                                     <a href="http://">Sci-fi</a>
                                     <a href="http://">Comedy</a>
                                     <a href="http://">Default</a>
                                     <a href="http://">Default</a>
-                                    <a href="http://">Default</a>
+                                    <a href="http://">Default</a> --}}
+                                @endforeach
                               </p>
                               <button class="btn btn-primary btn-fab btn-fab-mini btn-round" title="Add Genre">
 								<i class="material-icons">add</i>
@@ -99,11 +100,13 @@
                           <tr>
                               <h4 class="text-left title">Tag </h4>
                               <p class="text-left">
-                                <a href="http://">Action</a>
-                                <a href="http://">Romance</a>
+                                @foreach($novel->tag as $t)
+                                <a href="http://">{{$t->tag_name}}</a>
+                                {{-- <a href="http://">Romance</a>
                                 <a href="http://">Sci-fi</a>
                                 <a href="http://">Comedy</a>
-                                <a href="http://">Default</a>
+                                <a href="http://">Default</a> --}}
+                                @endforeach
                               </p>
                             <button class="btn btn-primary btn-fab btn-fab-mini btn-round" title="Add Tag">
                                 <i class="material-icons">add</i>
@@ -152,18 +155,28 @@
                                               {{$chapters->created_at}}
                                          </td>
                                          <td class="text-center">
-                                              {{$chapters->chapter_title}}
+                                             <a href="{{route('addc.show',$chapters->id)}}">
+                                                {{$chapters->chapter_title}}
+                                             </a>
                                          </td>
                                          <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" class="btn btn-info">
-                                                <i class="material-icons">person</i>
-                                            </button>
-                                            <button type="button" rel="tooltip" class="btn btn-success">
-                                                <i class="material-icons">edit</i>
-                                            </button>
-                                            <button type="button" rel="tooltip" class="btn btn-danger">
+                                            <form action="{{ route('addc.destroy',$chapters->id) }}" method="POST">
+                                            <a href="{{route('addc.show',$chapters->id)}}">
+                                                <button type="button" rel="tooltip" class="btn btn-info">
+                                                    <i class="material-icons">person</i>
+                                                </button>
+                                            </a>
+                                            <a href="{{url('/chapter/edit',$chapters->id)}}">
+                                                <button type="button" rel="tooltip" class="btn btn-success">
+                                                    <i class="material-icons">edit</i>
+                                                </button>
+                                            </a>
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" rel="tooltip" class="btn btn-danger">
                                                 <i class="material-icons">close</i>
                                             </button>
+                                            </form>
                                         </td>
                                       </tr>
                                       @endforeach
@@ -188,9 +201,11 @@
                 </ul>
 
               </div>
-              <button class="btn btn-fab btn-primary" rel="tooltip" title="Add New Chapter">
-                <i class="material-icons">add</i>
-              </button>
+              <a href="{{url('/ad-chapter',$novel->id)}}">
+                  <button class="btn btn-fab btn-primary" rel="tooltip" title="Add New Chapter">
+                    <i class="material-icons">add</i>
+                  </button>
+              </a>
             </div>
             </div>
             <div class="col-md-2 col-md-offset-1 stats">

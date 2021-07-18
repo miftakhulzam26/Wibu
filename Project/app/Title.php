@@ -18,30 +18,30 @@ class Title extends Model
         'creator_id',
     ];
 
-    public function ltitle()
-    {
-        return $this->belongsTo('App\Creator');
-    }
+    // public function ltitle()
+    // {
+    //     return $this->belongsTo('App\Creator');
+    // }
 
-    public function lchapter()
-    {
-        return $this->hasMany('App\Chapter');
-    }
+    // public function lchapter()
+    // {
+    //     return $this->hasMany('App\Chapter');
+    // }
 
-    public function lgenre()
+    public function genre()
     {
         return $this->belongsToMany('App\Genre');
     }
 
-    public function ltag()
+    public function tag()
     {
         return $this->belongsToMany('App\Tag');
     }
 
-    public function lreview()
-    {
-        return $this->hasMany('App\Review');
-    }
+    // public function lreview()
+    // {
+    //     return $this->hasMany('App\Review');
+    // }
 
 
 }

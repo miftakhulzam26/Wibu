@@ -13,9 +13,9 @@ class Genre extends Model
         'genre_desc',
     ];
 
-    public function lgenre()
+    public function title()
     {
-        return $this->belongsToMany('App\Genre');
+        return $this->belongsToMany('App\Title');
     }
 
 }

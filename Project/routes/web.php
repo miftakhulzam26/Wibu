@@ -48,6 +48,9 @@ Route::group(['namespace'=>'Frontend'], function () {
     Route::resource('gdesc', 'GdescController');
     Route::resource('tdesc', 'TdescController');
     Route::resource('addc', 'AddchapterController');
+    Route::get('/ad-chapter/{id}','AddchapterController@create');
+    Route::get('/chapter/edit/{id}','AddchapterController@edit');
+    Route::post('/chapter/update/{id}','AddchapterController@update');
     Route::resource('utitle', 'UtitleController');
     Route::resource('fchapter', 'FchapterController');
     Route::resource('adesc', 'AdescController');
