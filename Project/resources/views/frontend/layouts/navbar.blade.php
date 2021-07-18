@@ -98,12 +98,12 @@
             </a>
             <ul class="dropdown-menu dropdown-with-icons">
                 <li>
-                    <a href="{{ route('ulogin.index') }}">
+                    <a href="{{ url('login') }}">
                         <i class="material-icons">fingerprint</i> Login Page
                     </a>
                 </li>
                 <li>
-                    <a href="../examples/signup-page.html">
+                    <a href="{{ url('register') }}">
                         <i class="material-icons">person_add</i> Register Page
                     </a>
                 </li>

@@ -23,7 +23,7 @@ class PtitleController extends Controller
 
     $ftitle = DB::table('title')
             ->join('users', 'title.user_id', '=', 'users.id')
-            ->select('title.*', 'users.name as userName')
+            ->select('title.*', 'users.name as userName', 'users.id as userId')
             ->paginate(5);
 
     return view('frontend.list-title-page',compact('ftitle'));

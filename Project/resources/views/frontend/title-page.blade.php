@@ -1,7 +1,7 @@
 @extends('frontend/layouts.template')
 
 @section('header')
-    Title Page
+    Title Page - Novel Inspiration
 @endsection
 
 @section('content')
