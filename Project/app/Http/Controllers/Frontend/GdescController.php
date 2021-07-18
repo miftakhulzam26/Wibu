@@ -23,7 +23,14 @@ class GdescController extends Controller
         $gdesc = Genre::all();
         return view('frontend.list-genre-page',compact('gdesc'));
     }
-    public function show(Genre $gdesc){
-        return view('frontend.gdesc-page', compact('gdesc'));
+    public function show($id){
+        $gdesc = Genre::find($id);
+        $list = DB::table('genre_title')
+        ->join('genre', 'genre_title.genre_id', 'genre.id')
+        ->join('title', 'genre_title.title_id', 'title.id')
+        ->select('title.*', 'genre.*', 'genre.id')
+        ->where('genre_id', '=', $id)
+        ->paginate(6);
+        return view('frontend.gdesc-page', compact('gdesc','list'));
     }
 }

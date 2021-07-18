@@ -20,18 +20,10 @@
                 <a href="{{ url('ftitle/' . $t->id) }}">{{$t->name}}</a>
             </h4>
             <p class="card-description">
-                {{Str::limit($t->sinopsis,50)}} <a href="{{ url('ftitle/' . $t->id) }}"> Read More </a>
+                {{Str::limit($t->sinopsis,400)}} <a href="{{ url('ftitle/' . $t->id) }}"> Read More </a>
             </p>
             <p class="author">
-                Author : <a href="#pablo"><b>{{$t->userName}}</b></a>
-            </a>
-            <p class="author">
-                Genre :
-                <span class="label label-default"><a href="http://">Action</a></span>
-                <span class="label label-default"><a href="http://">Romance</a></span>
-                <span class="label label-default"><a href="http://">Sci-fi</a></span>
-                <span class="label label-default"><a href="http://">Fantasy</a></span>
-                <span class="label label-default"><a href="http://">Thriller</a></span>
+                Author : <a href="{{ url('adesc/' .$t->userId) }}"><b>{{$t->userName}}</b></a>
             </a>
         </div>
     </div>

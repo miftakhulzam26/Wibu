@@ -234,16 +234,15 @@
 
 
                                     <h4 class="card-title">
-                                        <a href="#pablo">{{ $item->chapter_title}}</a>
+                                        <a href="{{ url('fchapter/' . $item->chapterId) }}">{{ $item->chapter_title}}</a>
                                     </h4>
                                     <p class="card-description">
                                         {{Str::limit($item->chapter_text,40)}}
                                     </p>
                                     <div class="footer">
                                         <div class="author">
-                                            <a href="#pablo">
-                                               <img src="{{ asset('frontend/assets/img/faces/marc.jpg') }}" alt="..." class="avatar img-raised">
-                                               <span>Author</span>
+                                            <a href="{{ url('ftitle/' . $item->titleId) }}">
+                                               <span>{{$item->name}}</span>
                                             </a>
                                         </div>
                                        <div class="stats">

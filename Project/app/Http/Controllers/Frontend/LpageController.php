@@ -20,10 +20,10 @@ class LpageController extends Controller
         ->orderBy('favorit', 'desc')
         ->get();
 
-        $latest = DB::table('chapter')
-        ->join('title', 'chapter.title_id', '=', 'chapter.id')
-        ->select('chapter.*', 'title.name', 'title.cover')
-        ->orderBy('created_at','desc')
+        $latest = DB::table('title')
+        ->join('chapter', 'title.id', '=', 'chapter.title_id')
+        ->select('title.*', 'title.id as titleId', 'chapter.*', 'chapter.id as chapterId')
+        ->orderBy('chapterId','desc')
         ->paginate(9);
 
         return view('frontend.landing-page',compact('carousel','popular','latest'));

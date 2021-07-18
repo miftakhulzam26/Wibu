@@ -53,6 +53,7 @@ Route::group(['namespace'=>'Frontend'], function () {
     Route::post('/chapter/update/{id}','AddchapterController@update');
     Route::resource('utitle', 'UtitleController');
     Route::resource('fchapter', 'FchapterController');
+    Route::resource('adesc', 'AdescController');
     Route::get('/ltitle', 'PtitleController@index')->name('ltitle.index');
 
 
