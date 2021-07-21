@@ -155,7 +155,7 @@
                                               {{$chapters->created_at}}
                                          </td>
                                          <td class="text-center">
-                                             <a href="{{route('addc.show',$chapters->id)}}">
+                                             <a href="{{route('fchapter.show',$chapters->id)}}">
                                                 {{$chapters->chapter_title}}
                                              </a>
                                          </td>
@@ -182,6 +182,7 @@
                                       @endforeach
                                   </tbody>
                                 </table>
+                                {!! $chapter->links() !!}
 
                           </tr>
                       </tbody>

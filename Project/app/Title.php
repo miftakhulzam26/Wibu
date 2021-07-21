@@ -37,6 +37,10 @@ class Title extends Model
     {
         return $this->belongsToMany('App\Tag');
     }
+    public function chapter()
+    {
+        return $this->hasMany('App\Chapter');
+    }
 
     // public function lreview()
     // {

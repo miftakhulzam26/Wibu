@@ -25,7 +25,7 @@
 
         </div>
     </div>
-    {{-- <div class="section section-comments">
+    <div class="section section-comments">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="media-area">
@@ -71,7 +71,7 @@
                   </div> <!-- end media-post -->
             </div>
         </div>
-    </div> --}}
+    </div>
 
 </div>
 <link rel="stylesheet" href="{{asset('froala/css/froala_editor.css')}}">

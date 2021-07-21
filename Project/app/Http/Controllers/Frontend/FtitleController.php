@@ -26,13 +26,13 @@ class FtitleController extends Controller
         $genre = DB::table('genre_title')
         ->join('genre', 'genre_title.genre_id', '=', 'genre.id')
         ->join('title', 'genre_title.title_id', '=', 'title.id')
-        ->select('genre_title.*', 'genre.genre_name',)
+        ->select('genre_title.*', 'genre.genre_name')
         ->where('title_id', '=', $id)
         ->get();
         $tag = DB::table('tag_title')
         ->join('tag', 'tag_title.tag_id', '=', 'tag.id')
         ->join('title', 'tag_title.title_id', '=', 'title.id')
-        ->select('tag_title.*', 'tag.tag_name',)
+        ->select('tag_title.*', 'tag.tag_name')
         ->where('title_id', '=', $id)
         ->get();
         return view('frontend.title-page', compact('title','chapter','genre','tag'));

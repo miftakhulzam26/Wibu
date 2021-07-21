@@ -83,50 +83,58 @@
             <div class="col-md-7 col-md-offset-1">
                 <h4 class="title">Latest Chapters</h4>
                 <div class="row collections">
-                    <div class="col-md-6">
-                        <div class="card card-background" style="background-image: url('{{ asset('frontend/assets/img/test1.jpg') }}') ; width:300px;height:500px ">
-                            <a href="#pablo"></a>
-                            <div class="card-content">
-                                <label class="label label-primary">Romance</label>
-                                <a href="#pablo">
-                                    <h2 class="card-title">Stilleto</h2>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card card-background" style="background-image: url('{{ asset('frontend/assets/img/test1.jpg') }}') ; width:300px;height:500px ">
-                            <a href="#pablo"></a>
-                            <div class="card-content">
-                                <label class="label label-primary">Romance</label>
-                                <a href="#pablo">
-                                    <h2 class="card-title">Stilleto</h2>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card card-background" style="background-image: url('{{ asset('frontend/assets/img/test1.jpg') }}') ; width:300px;height:500px ">
-                            <a href="#pablo"></a>
-                            <div class="card-content">
-                                <label class="label label-primary">Romance</label>
-                                <a href="#pablo">
-                                    <h2 class="card-title">Stilleto</h2>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card card-background" style="background-image: url('{{ asset('frontend/assets/img/test1.jpg') }}') ; width:300px;height:500px ">
-                            <a href="#pablo"></a>
-                            <div class="card-content">
-                                <label class="label label-primary">Romance</label>
-                                <a href="#pablo">
-                                    <h2 class="card-title">Stilleto</h2>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <table class="table">
+                        <thead class=" text-primary">
+                          <th class="text-left">
+                            Date
+                          </th>
+                          <th class="text-center">
+                            Chapter
+                          </th>
+                          <th class="text-right">
+                            Novel
+                          </th>
+                        </thead>
+                        @foreach($chap as $item)
+                        @foreach($item->chapter as $chapters)
+                        <tbody>
+                            <tr>
+                               <td class="text-left">
+                                    {{$chapters->created_at}}
+                               </td>
+                               <td class="text-center">
+                                   <a href="{{route('fchapter.show',$chapters->id)}}">
+                                      {{$chapters->chapter_title}}
+                                   </a>
+                               </td>
+                               <td class="text-right">
+                                    {{$item->name}}
+                               </td>
+                               {{-- <td class="td-actions text-right">
+                                  <form action="{{ route('addc.destroy',$chapters->id) }}" method="POST">
+                                  <a href="{{route('addc.show',$chapters->id)}}">
+                                      <button type="button" rel="tooltip" class="btn btn-info">
+                                          <i class="material-icons">person</i>
+                                      </button>
+                                  </a>
+                                  <a href="{{url('/chapter/edit',$chapters->id)}}">
+                                      <button type="button" rel="tooltip" class="btn btn-success">
+                                          <i class="material-icons">edit</i>
+                                      </button>
+                                  </a>
+                                  @csrf
+                                  @method('DELETE')
+                                  <button type="submit" rel="tooltip" class="btn btn-danger">
+                                      <i class="material-icons">close</i>
+                                  </button>
+                                  </form>
+                              </td> --}}
+                            </tr>
+                        </tbody>
+                        @endforeach
+                        @endforeach
+                    </table>
+                    {!! $chap->links() !!}
                 </div>
             </div>
             <div class="col-md-2 col-md-offset-1 stats">

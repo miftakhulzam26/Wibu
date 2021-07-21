@@ -16,7 +16,7 @@ class Chapter extends Model
         'title_id'
     ];
 
-    public function lchapter()
+    public function title()
     {
         return $this->belongsTo('App\Title');
     }
