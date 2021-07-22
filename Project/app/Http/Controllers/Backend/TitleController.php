@@ -133,7 +133,7 @@ class TitleController extends Controller
         $post->name = $request->judul;
         $post->favorit = $request->favorit;
         $post->sinopsis = $request->sinopsis;
-        $post->creator_id = $request->pengarang;
+        $post->user_id = $request->pengarang;
         $post->save();
 
         return redirect()->route('title.index')
