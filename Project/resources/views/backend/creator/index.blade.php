@@ -32,9 +32,9 @@
                     <th>
                       Name
                     </th>
-                    <th>
+                    {{-- <th>
                       Profile
-                    </th>
+                    </th> --}}
                     <th>
                       Email
                     </th>
@@ -68,9 +68,9 @@
                         </td>
                         <td class="td-actions text-right">
                         <form action="{{ route('user.destroy',$item->id) }}" method="POST">
-                          <a href="{{ route('user.edit',$item->id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                          {{-- <a href="{{ route('user.edit',$item->id) }}"><button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
                             <i class="material-icons">edit</i></a>
-                          </button>
+                          </button> --}}
                           @csrf
                           @method('DELETE')
                           <button type="submit" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm" onclick="return confirm('Yakin akan menghapus data?')">

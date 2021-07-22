@@ -15,7 +15,6 @@ class CreatorController extends Controller
     public function index()
     {
         $creator = DB::table('users')
-        ->where('job', '=', null)
         ->get();
 
         return view('backend.creator.index',compact('creator'));

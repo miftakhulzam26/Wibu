@@ -29,11 +29,11 @@ class UserController extends Controller
 
     // public function edit($id)
     // {
-    //     $creator = DB::table('creator')->where('creator_id',$id)->first();
-    //     return view('backend.creator.edit',compact('creator'));
+    //     $user = User::find($id);
+    //     return view('backend.user.edit',compact('user'));
     // }
 
-    // public function update(Request $request)
+    // public function update(Request $request,$id)
     // {
     //     DB::table('creator')->where('creator_id',$request->creator_id)->update([
     //         'creator_name' => $request->creator_name,
@@ -42,6 +42,7 @@ class UserController extends Controller
     //         'creator_password' => $request->creator_password,
     //         'creator_desc' => $request->creator_desc,
     //     ]);
+    //     $user = User::find($id);
 
     //     return redirect()->route('user.index')->with('success','Data Telah Berhasil Diperbarui.');
     // }
