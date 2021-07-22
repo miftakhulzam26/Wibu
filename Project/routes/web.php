@@ -55,7 +55,8 @@ Route::group(['namespace'=>'Frontend'], function () {
     Route::resource('fchapter', 'FchapterController');
     Route::resource('adesc', 'AdescController');
     Route::get('/ltitle', 'PtitleController@index')->name('ltitle.index');
-
+    Route::get('query', 'SfinderController@show');
+    Route::get('bookmark', 'BookmarkController@bookmark');
 
 
 });
@@ -66,6 +67,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('ftitle/{id}', 'FtitleController@displayDetail')->name('displayDetail');
 Route::get('/upload', 'UploadController@index');
 Route::post('/upload/proses', 'UploadController@store');
+
 
 // Route::get('gdesc/{id}', 'GdescController@index');
 // Route::get('tdesc/{id}', 'TdescController@index');

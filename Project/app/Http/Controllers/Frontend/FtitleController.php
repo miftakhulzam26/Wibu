@@ -38,6 +38,8 @@ class FtitleController extends Controller
         return view('frontend.title-page', compact('title','chapter','genre','tag'));
     }
 
+
+
     //function displayDetail($id) {
     //    $title = Title::find($id);
     //    $chapter = Chapter::where('title_id', '$id');

@@ -53,4 +53,6 @@ class UprofileController extends Controller
         return redirect()->route('profu.index')
                         ->with('success','Post updated successfully');
     }
+
+
 }

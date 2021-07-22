@@ -57,7 +57,7 @@
                                       </div>
                                   </div>-->
                                   @foreach ($genre as $item)
-                                  <a href="http://">{{$item->genre_name}}</a>
+                                  <a href="{{url('gdesc/'.$item->id)}}">{{$item->genre_name}}</a>
                                   @endforeach
 
 
@@ -67,7 +67,7 @@
                               <h4 class="text-left title">Tag </h4>
                               <p class="text-left">
                                 @foreach ($tag as $item)
-                                  <a href="http://">{{$item->tag_name}}</a>
+                                  <a href="{{url('tdesc/'.$item->id)}}">{{$item->tag_name}}</a>
                                 @endforeach
                               </p>
                           </tr>
@@ -128,9 +128,10 @@
                       </tbody>
                   </table>
               </div>
-              <button class="btn btn-fab btn-primary" rel="tooltip" title="Add to Bookmark">
-                <i class="material-icons">add</i>
-              </button>
+                <button class="btn btn-fab btn-primary" value="submit" rel="tooltip" title="Add to Review">
+                    <i class="material-icons">add</i>
+                </button>
+
             </div>
           </div>
         </div>

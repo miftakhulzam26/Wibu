@@ -3,29 +3,28 @@
 namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-
-use App\Genre;
-
-use App\Tag;
-
-use App\Title;
-
-use App\TagTitle;
-
-use App\GenreTitle;
 
 class SfinderController extends Controller
 {
     public function index()
     {
-        $genre = Genre::all();
-        $tag = Tag::all();
-        $tag_title = TagTitle::all();
-        $genre_title = GenreTitle::all();
+        return view('frontend.search-page');
+    }
 
+    public function show(Request $request)
+    {
+        $search = $request->get('search');
 
-        return view('frontend.search-page', compact('genre','tag'));
+        $query = DB::table('users')
+        ->join('title', 'users.id', 'title.user_id')
+        ->select('users.*', 'title.*', 'users.id as userId', 'users.name as userName')
+        ->where('title.name', 'LIKE', '%' .$search. '%')
+        ->orWhere('users.name', 'LIKE', '%' .$search. '%')
+        ->orderBy('title.name', 'asc')
+        ->paginate(6);
+
+        return view('frontend.search-page', compact('query'));
     }
 }
