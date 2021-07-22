@@ -161,7 +161,7 @@
                                          </td>
                                          <td class="td-actions text-right">
                                             <form action="{{ route('addc.destroy',$chapters->id) }}" method="POST">
-                                            <a href="{{route('addc.show',$chapters->id)}}">
+                                            <a href="{{route('fchapter.show',$chapters->id)}}">
                                                 <button type="button" rel="tooltip" class="btn btn-info">
                                                     <i class="material-icons">person</i>
                                                 </button>

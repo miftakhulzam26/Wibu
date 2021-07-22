@@ -63,12 +63,12 @@
                             Work
                         </a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="#media" role="tab" data-toggle="tab">
                             <i class="material-icons">camera</i>
                             Bookmark
                         </a>
-                    </li>
+                    </li>-->
                 </ul>
 
 
@@ -184,7 +184,7 @@
 
         </div>
     </div>
-    <div class="tab-pane text-center gallery" id="media">
+    <!--<div class="tab-pane text-center gallery" id="media">
         <div class="row">
             <div class="col-md-4">
 
@@ -320,6 +320,6 @@
 
 
         </div>
-    </div>
+    </div>-->
 </div>
 @endsection

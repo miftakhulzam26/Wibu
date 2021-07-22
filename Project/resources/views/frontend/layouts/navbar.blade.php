@@ -37,11 +37,11 @@
                         <i class="material-icons">chat</i> Tag List
                     </a>
                 </li>
-                <li>
+                <!--<li>
                     <a href="{{ route('sfinder.index') }}">
                         <i class="material-icons">art_track</i> Series Finder
                     </a>
-                </li>
+                </li>-->
 
 
             </ul>
@@ -60,11 +60,11 @@
                         <i class="material-icons">account_circle</i> My Profile
                     </a>
                 </li>
-                <li>
+                <!--<li>
                     <a href="{{ route('bmark.index') }}">
                         <i class="material-icons">view_quilt</i> Bookmark
                     </a>
-                </li>
+                </li>-->
             </ul>
         </li>
         <li class="activate dropdown">
@@ -116,5 +116,12 @@
                 <i class="material-icons">unarchive</i> Download
             </a>
         </li>
+        <form class="navbar-form navbar-right" method="GET" role="search" action="{{url ('query')}}">
+            <div class="form-group form-white">
+              <input type="text" class="form-control" placeholder="Search" name="search" required>
+            </div>
+            <button type="submit" class="btn btn-white btn-raised btn-fab btn-fab-mini"><i class="material-icons">search</i></button>
+        </form>
     </ul>
+
 </div>

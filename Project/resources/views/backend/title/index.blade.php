@@ -65,7 +65,7 @@
                             <img src="{{ asset('images/'.$item->cover)  }}" style="max-height:200px;max-width:100px;margin-top:10px;">
                         </td>
                         <td>
-                            {{$item->sinopsis}}
+                            {{Str::Limit($item->sinopsis,100)}}
                         </td>
                         <td>
                             {{$item->favorit}}
