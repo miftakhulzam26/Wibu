@@ -12,10 +12,10 @@
               <p class="card-category">Edit Title Genre</p>
             </div>
             <div class="card-body">
-              <form method="POST" action="{{ route('titleg.update',$titleg->titlegenre_id) }}" enctype="multipart/form-data">
+              <form method="POST" action="{{ route('titleg.update',$titleg->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-                <input type="hidden" id="titlegenre_id" name="titlegenre_id" value="{{ $titleg->titlegenre_id }}" class="form-control">
+                <input type="hidden" id="titlegenre_id" name="titlegenre_id" value="{{ $titleg->id }}" class="form-control">
                 {{-- <div class="row">
                   <div class="col-md-5">
                     <div class="form-group">

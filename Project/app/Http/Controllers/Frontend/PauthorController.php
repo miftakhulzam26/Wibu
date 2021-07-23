@@ -12,7 +12,7 @@ class PauthorController extends Controller
     public function index()
     {
         $author = DB::table('users')
-        ->where('job', '=', null)
+        // ->where('job', '=', null)
         ->orderBy('name')
         ->paginate(6);
 

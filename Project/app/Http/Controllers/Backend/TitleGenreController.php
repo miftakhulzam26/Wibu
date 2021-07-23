@@ -42,7 +42,6 @@ class TitleGenreController extends Controller
         return redirect()->route('titleg.index')->with('success','Genre Title has been created successfully.');
     }
     public function edit(GenreTitle $titleg){
-
         $title = DB::table('title')->get();
         $genre = DB::table('genre')->get();
         return view('backend.titleg.edit',compact('titleg','title','genre'));
