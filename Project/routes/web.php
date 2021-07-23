@@ -56,8 +56,8 @@ Route::group(['namespace'=>'Frontend'], function () {
     Route::resource('adesc', 'AdescController');
     Route::get('/ltitle', 'PtitleController@index')->name('ltitle.index');
     Route::get('query', 'SfinderController@show');
-    Route::get('bookmark', 'BookmarkController@bookmark');
-
+    Route::resource('addgen', 'GenreTitleController');
+    Route::resource('addtag', 'TagTitleController');
 
 });
 // Route::resource('posts', PostCRUDController::class);

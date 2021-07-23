@@ -16,15 +16,13 @@
                             Title
                         </a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="#connections" role="tab" data-toggle="tab">
                             <i class="material-icons">people</i>
                             Review
                         </a>
-                    </li>
+                    </li>-->
                 </ul>
-
-
             </div>
         </div>
         <!-- End Profile Tabs -->
@@ -66,51 +64,24 @@
                           <tr>
                               <h4 class="text-left title">Genre </h4>
                               <p class="text-left" style="">
-                                  <!--<div class="row">
-                                      <div class="col-md-3">
-                                        <span class="label label-default">Action</span>
-                                      </div>
-                                      <div class="col-md-3">
-                                        <span class="label label-default">Romance</span>
-                                      </div>
-                                      <div class="col-md-3">
-                                        <span class="label label-default">Sci-fi</span>
-                                      </div>
-                                      <div class="col-md-3">
-                                        <span class="label label-default">Comedy</span>
-                                      </div>
-                                      <div class="col-md-3">
-                                        <span class="label label-default">Default</span>
-                                      </div>
-                                  </div>-->
                                 @foreach($novel->genre as $g)
                                     <a href="http://">{{$g->genre_name}}</a>
-                                    {{-- <a href="http://">Romance</a>
-                                    <a href="http://">Sci-fi</a>
-                                    <a href="http://">Comedy</a>
-                                    <a href="http://">Default</a>
-                                    <a href="http://">Default</a>
-                                    <a href="http://">Default</a> --}}
                                 @endforeach
                               </p>
-                              <button class="btn btn-primary btn-fab btn-fab-mini btn-round" title="Add Genre">
+                              <a href="{{url('addgen',$novel->id)}}"><button class="btn btn-primary btn-fab btn-fab-mini btn-round" title="Add Genre">
 								<i class="material-icons">add</i>
-							  </button>
+							  </button></a>
                           </tr>
                           <tr>
                               <h4 class="text-left title">Tag </h4>
                               <p class="text-left">
                                 @foreach($novel->tag as $t)
                                 <a href="http://">{{$t->tag_name}}</a>
-                                {{-- <a href="http://">Romance</a>
-                                <a href="http://">Sci-fi</a>
-                                <a href="http://">Comedy</a>
-                                <a href="http://">Default</a> --}}
                                 @endforeach
                               </p>
-                            <button class="btn btn-primary btn-fab btn-fab-mini btn-round" title="Add Tag">
+                            <a href="{{url('addtag',$novel->id)}}"><button class="btn btn-primary btn-fab btn-fab-mini btn-round" title="Add Tag">
                                 <i class="material-icons">add</i>
-                            </button>
+                            </button></a>
 
                           </tr>
                           <tr>
@@ -183,7 +154,6 @@
                                   </tbody>
                                 </table>
                                 {!! $chapter->links() !!}
-
                           </tr>
                       </tbody>
 
@@ -195,6 +165,7 @@
                     <i class="material-icons">add</i>
                   </button>
               </a>
+
             </div>
             </div>
             <div class="col-md-2 col-md-offset-1 stats">
@@ -215,7 +186,7 @@
             </div>
         </div>
     </div>
-    <div class="tab-pane connections" id="connections">
+    <!--<div class="tab-pane connections" id="connections">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="media-area">
@@ -234,7 +205,7 @@
                             <p>All praises and blessings to the families of people who never gave up on dreams. Don't forget, You're Awesome!</p>
             </div>
         </div>
-    </div>
+    </div>-->
 
 </div>
 @endsection
