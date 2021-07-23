@@ -18,7 +18,7 @@
                     <option value="{{$item->id}}">{{$item->tag_name}}</option>
                 @endforeach
             </select>
-            <button type="submit">Save</button>
+            <button class="btn btn-primary" type="submit">Save</button>
         </div>
     </form>
 </div>
