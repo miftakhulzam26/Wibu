@@ -44,7 +44,7 @@ class GenreTitleController extends Controller
 
         $post->save();
 
-        return redirect()->route('profu.index');
+        return redirect()->url('profu.index');
     }
 
 }
