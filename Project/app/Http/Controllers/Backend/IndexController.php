@@ -15,12 +15,13 @@ class IndexController extends Controller
     }
     public function index()
     {
-        $creator = DB::table('creator')->count();
+        $users = DB::table('users')->where('job','=',null)->count();
         $genre = DB::table('genre')->count();
         $tag = DB::table('tag')->count();
         $chapter = DB::table('chapter')->count();
-        $users = DB::table('users')->count();
+        $admin = DB::table('users')->where('job','=',1)->count();
         $title = DB::table('title')->count();
-        return view('backend.index',compact('creator','genre','tag','chapter','users','title'));
+        $comment = DB::table('comment')->count();
+        return view('backend.index',compact('genre','tag','chapter','users','title','comment','admin'));
     }
 }
