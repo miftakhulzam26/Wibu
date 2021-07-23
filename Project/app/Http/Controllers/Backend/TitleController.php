@@ -71,7 +71,7 @@ class TitleController extends Controller
         $post->favorit = $request->favorit;
         $post->sinopsis = $request->sinopsis;
         $post->cover = $nama_file;
-        $post->creator_id = $request->pengarang;
+        $post->user_id = $request->pengarang;
 
 
         $post->save();
