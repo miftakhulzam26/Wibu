@@ -108,7 +108,6 @@ class CarouselController extends Controller
         $request->validate([
             'title' => 'required',
             'text' => 'required',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
             'link' => 'required',
         ]);
 
@@ -120,13 +119,12 @@ class CarouselController extends Controller
             $file           = $request->file('image');
             $nama_file      = $file->getClientOriginalName();
             $file->move('images',$file->getClientOriginalName());
-            $post->cover = $nama_file;
+            $post->image = $nama_file;
         }
 
         $post->title = $request->title;
         $post->text = $request->text;
         $post->link = $request->link;
-        $post->image = $nama_file;
         $post->save();
 
         return redirect()->route('carousel.index')

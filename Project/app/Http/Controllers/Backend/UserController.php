@@ -27,30 +27,30 @@ class UserController extends Controller
         return view('backend.user.create',compact('user'));
     }
 
-    // public function edit($id)
-    // {
-    //     $creator = DB::table('creator')->where('creator_id',$id)->first();
-    //     return view('backend.creator.edit',compact('creator'));
-    // }
+    public function edit($id)
+    {
+        $user = DB::table('users')->where('id',$id)->first();
+        return view('backend.user.edit',compact('user'));
+    }
 
-    // public function update(Request $request)
-    // {
-    //     DB::table('creator')->where('creator_id',$request->creator_id)->update([
-    //         'creator_name' => $request->creator_name,
-    //         //'user_profile' => $request->creator_profile,
-    //         'creator_email' => $request->creator_email,
-    //         'creator_password' => $request->creator_password,
-    //         'creator_desc' => $request->creator_desc,
-    //     ]);
+    public function update(Request $request)
+    {
+        DB::table('users')->where('id',$request->creator_id)->update([
+            'name' => $request->creator_name,
+            //'user_profile' => $request->creator_profile,
+            'email' => $request->creator_email,
+            'password' => $request->creator_password,
+            'desc' => $request->creator_desc,
+        ]);
 
-    //     return redirect()->route('user.index')->with('success','Data Telah Berhasil Diperbarui.');
-    // }
+        return redirect()->route('user.index')->with('success','Data Telah Berhasil Diperbarui.');
+    }
 
-    // public function destroy($id)
-    // {
-    //     DB::table('creator')->where('creator_id',$id)->delete();
-    //     return redirect()->route('user.index')->with('success','Data Creator Berhasil Dihapus');
-    // }
+    public function destroy($id)
+    {
+        DB::table('users')->where('id',$id)->delete();
+        return redirect()->route('user.index')->with('success','Data Creator Berhasil Dihapus');
+    }
     public function store(Request $request)
     {
         $request->validate([
