@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Android\\Contoh\\TheMovieDB-master\\Movie Catalogue\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
+            "outputFile": "C:\\xampp\\htdocs\\Wibu\\Movie Catalogue\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\arder\\.gradle\\caches\\transforms-2\\files-2.1\\13fc154bb6ccef0b2c55e3d5dd065c9a\\material-1.2.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\userr\\.gradle\\caches\\transforms-2\\files-2.1\\13fc154bb6ccef0b2c55e3d5dd065c9a\\material-1.2.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
