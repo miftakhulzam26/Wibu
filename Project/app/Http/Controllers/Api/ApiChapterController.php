@@ -48,6 +48,15 @@ class ApiChapterController extends Controller
             'data' => $chapter
         ],200);
     }
+    public function list($id)
+    {
+        $chapter = Chapter::where('title_id',$id)->get();
+        return response()->json([
+            'status' => 'OK',
+            'message' => 'Data Chapter Berhasil Tampil Sesuai ID',
+            'data' => $chapter
+        ],200);
+    }
 
     //public function store(Request $request)
     //{

@@ -40,6 +40,7 @@ $api->version('v1', function($api) {
         //Route Api Chapter
         $api->get('chapter','ApiChapterController@index');
         $api->get('chapter/{id}', 'ApiChapterController@show');
+        $api->get('chapter/{id}/list', 'ApiChapterController@list');
         $api->post('chapter', 'ApiChapterController@create');
         $api->put('chapter/{id}/update', 'ApiChapterController@update');
         $api->delete('chapter/{id}/delete', 'ApiChapterController@delete');
