@@ -140,18 +140,16 @@
             <div class="col-md-2 col-md-offset-1 stats">
                 <h4 class="title">Stats</h4>
                 <ul class="list-unstyled">
-                    <li><b>60</b> Stories</li>
-                    <li><b>4</b> Chapters</li>
-                    <li><b>331</b> Viewers</li>
-                    <li><b>1.2K</b> Likes</li>
+                    <li><b>{{$title}}</b> Stories</li>
+
                 </ul>
                 <hr />
-                <h4 class="title">About My Work</h4>
+                <!--<h4 class="title">About My Work</h4>
                 <p class="description">French luxury footwear and fashion. The footwear has incorporated shiny, red-lacquered soles that have become his signature.</p>
                 <hr />
                 <h4 class="title">Focus</h4>
                 <span class="label label-primary">Romance</span>
-                <span class="label label-rose">Slice of Life</span>
+                <span class="label label-rose">Slice of Life</span>-->
             </div>
         </div>
     </div>

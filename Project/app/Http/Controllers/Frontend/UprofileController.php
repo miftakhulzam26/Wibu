@@ -21,7 +21,10 @@ class UprofileController extends Controller
         $user = Auth::user();
         $novel = DB::select('select * from title where user_id = ?', [Auth::user()->id]);
         $chap = Title::where('user_id',Auth::user()->id)->paginate(5);
-        return view('frontend.profile-page',compact('user','novel','chap'));
+        $title = DB::table('title')
+        ->where('user_id', '=', $user->id)
+        ->count();
+        return view('frontend.profile-page',compact('user','novel','chap','title'));
     }
     // public function show($id)
     // {
