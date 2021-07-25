@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', 'LpageController@index');
 
 
 Route::group(['namespace'=>'Backend'], function () {
@@ -35,6 +33,7 @@ Route::group(['namespace'=>'Backend'], function () {
 });
 
 Route::group(['namespace'=>'Frontend'], function () {
+    Route::get('/', 'LpageController@index');
     Route::resource('ftitle', 'FtitleController');
     Route::resource('lpage', 'LpageController');
     Route::resource('ulogin', 'UloginController');
