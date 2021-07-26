@@ -48,6 +48,16 @@ class ApiTitleController extends Controller
             'data' => $title
         ],200);
     }
+    public function search($name)
+    {
+        $title = Title::where('name', 'like', "%{$name}%")
+        ->get();
+        return response()->json([
+            'status' => 'OK',
+            'message' => 'Data Title Berhasil Tampil Sesuai ID',
+            'data' => $title
+        ],200);
+    }
 
     //public function store(Request $request)
     //{
