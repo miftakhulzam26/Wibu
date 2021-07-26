@@ -1,7 +1,0 @@
-#Mon Jul 26 08:03:31 ICT 2021
-base.0=D\:\\Document\\Wibu\\TheMovieDB-master\\Movie Catalogue\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
-path.1=classes.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=D\:\\Document\\Wibu\\TheMovieDB-master\\Movie Catalogue\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
