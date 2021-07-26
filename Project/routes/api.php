@@ -97,6 +97,7 @@ $api->version('v1', function($api) {
         //Route Api Title
         $api->get('title','ApiTitleController@index');
         $api->get('title/{id}', 'ApiTitleController@show');
+        $api->get('title/search/{name}', 'ApiTitleController@search');
         $api->post('title', 'ApiTitleController@create');
         $api->put('title/{id}/update', 'ApiTitleController@update');
         $api->delete('title/{id}/delete', 'ApiTitleController@delete');

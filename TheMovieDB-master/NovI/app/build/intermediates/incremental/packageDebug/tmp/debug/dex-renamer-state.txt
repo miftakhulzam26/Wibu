@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 #Mon Jul 26 09:52:44 ICT 2021
 base.0=C\:\\xampp\\htdocs\\Wibu\\TheMovieDB-master\\NovI\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+=======
+#Mon Jul 26 09:39:34 ICT 2021
+base.0=D\:\\Document\\Wibu\\TheMovieDB-master\\NovI\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+>>>>>>> 6fc991b36ed809792792a9e8be1ba4ad7149ccdb
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
