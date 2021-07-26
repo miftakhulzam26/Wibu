@@ -98,7 +98,7 @@ public class NovelAdapter extends RecyclerView.Adapter<NovelAdapter.ViewHolder> 
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvRealeseDate = itemView.findViewById(R.id.tvRealeseDate);
             tvDesc = itemView.findViewById(R.id.tvDesc);
-            ratingBar = itemView.findViewById(R.id.ratingBar);
+
         }
     }
 

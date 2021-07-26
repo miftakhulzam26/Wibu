@@ -1015,6 +1015,7 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1665,7 +1666,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fabShare
 id fade
 id fill
 id fill_horizontal
@@ -1693,7 +1693,6 @@ id ifRoom
 id image
 id imgCover
 id imgFavorite
-id imgNotification
 id imgPhoto
 id info
 id inside
@@ -1764,7 +1763,6 @@ id pin
 id progress_circular
 id progress_horizontal
 id radio
-id ratingBar
 id right
 id right_icon
 id right_side
@@ -1873,11 +1871,9 @@ id tvNotFound
 id tvOverview
 id tvPopularity
 id tvRD
-id tvRating
 id tvRealeseDate
 id tvRelease
 id tvTitle
-id tvVote
 id unchecked
 id uniform
 id unlabeled

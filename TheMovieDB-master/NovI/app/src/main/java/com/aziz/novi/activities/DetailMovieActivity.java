@@ -84,18 +84,18 @@ public class DetailMovieActivity extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Sedang menampilkan trailer");
 
-        ratingBar = findViewById(R.id.ratingBar);
+//        ratingBar = findViewById(R.id.ratingBar);
         imgCover = findViewById(R.id.imgCover);
         imgPhoto = findViewById(R.id.imgPhoto);
         imgFavorite = findViewById(R.id.imgFavorite);
         tvTitle = findViewById(R.id.tvTitle);
         tvName = findViewById(R.id.tvName);
-        tvRating = findViewById(R.id.tvRating);
+//        tvRating = findViewById(R.id.tvRating);
         tvRelease = findViewById(R.id.tvRelease);
         tvPopularity = findViewById(R.id.tvPopularity);
         tvOverview = findViewById(R.id.tvOverview);
         rvTrailer = findViewById(R.id.rvTrailer);
-        fabShare = findViewById(R.id.fabShare);
+//        fabShare = findViewById(R.id.fabShare);
 
 //        helper = new RealmHelper(this);
 

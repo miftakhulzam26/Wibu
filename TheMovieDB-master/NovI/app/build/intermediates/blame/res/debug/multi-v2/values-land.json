@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Document\\Wibu\\TheMovieDB-master\\NovI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "C:\\xampp\\htdocs\\Wibu\\TheMovieDB-master\\NovI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\arder\\.gradle\\caches\\transforms-2\\files-2.1\\13fc154bb6ccef0b2c55e3d5dd065c9a\\material-1.2.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\userr\\.gradle\\caches\\transforms-2\\files-2.1\\13fc154bb6ccef0b2c55e3d5dd065c9a\\material-1.2.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,24,30",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\arder\\.gradle\\caches\\transforms-2\\files-2.1\\c6c9f2ba1051a6cd87625b33904019b5\\appcompat-1.2.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\userr\\.gradle\\caches\\transforms-2\\files-2.1\\c6c9f2ba1051a6cd87625b33904019b5\\appcompat-1.2.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorDark">
 
     <com.github.florent37.diagonallayout.DiagonalLayout
         android:layout_width="match_parent"
@@ -79,7 +79,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardBackgroundColor="@color/white"
                         app:cardCornerRadius="10dp"
                         app:cardElevation="3dp">
 
@@ -103,7 +103,7 @@
                                     android:ellipsize="marquee"
                                     android:marqueeRepeatLimit="marquee_forever"
                                     android:singleLine="true"
-                                    android:textColor="@android:color/white"
+                                    android:textColor="@android:color/black"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />
 
@@ -113,35 +113,35 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content">
 
-                                <TextView
-                                    android:id="@+id/tvVote"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentStart="true"
-                                    android:layout_centerInParent="true"
-                                    android:text="Rating :"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="14sp" />
+<!--                                <TextView-->
+<!--                                    android:id="@+id/tvVote"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_alignParentStart="true"-->
+<!--                                    android:layout_centerInParent="true"-->
+<!--                                    android:text="Rating :"-->
+<!--                                    android:textColor="@android:color/black"-->
+<!--                                    android:textSize="14sp" />-->
 
-                                <TextView
-                                    android:id="@+id/tvRating"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    android:layout_marginStart="5dp"
-                                    android:layout_toEndOf="@id/tvVote"
-                                    android:singleLine="true"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="14sp" />
+<!--                                <TextView-->
+<!--                                    android:id="@+id/tvRating"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_centerInParent="true"-->
+<!--                                    android:layout_marginStart="5dp"-->
+<!--                                    android:layout_toEndOf="@id/tvVote"-->
+<!--                                    android:singleLine="true"-->
+<!--                                    android:textColor="@android:color/black"-->
+<!--                                    android:textSize="14sp" />-->
 
                             </RelativeLayout>
 
-                            <RatingBar
-                                android:id="@+id/ratingBar"
-                                style="@style/Widget.AppCompat.RatingBar.Small"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:progressTint="@color/colorRating" />
+<!--                            <RatingBar-->
+<!--                                android:id="@+id/ratingBar"-->
+<!--                                style="@style/Widget.AppCompat.RatingBar.Small"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:progressTint="@color/colorRating" />-->
 
                         </LinearLayout>
 
@@ -176,7 +176,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="3dp">
 
@@ -196,7 +196,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Tanggal Rilis :"
-                            android:textColor="@android:color/white"
+                            android:textColor="@android:color/black"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -206,7 +206,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/tvRD"
                             android:text="Alumni"
-                            android:textColor="@color/colorAccent"
+                            android:textColor="@color/colorPrimaryDark"
                             android:textSize="12sp" />
 
                     </RelativeLayout>
@@ -221,7 +221,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Kepopuleran :"
-                            android:textColor="@android:color/white"
+                            android:textColor="@android:color/black"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -245,7 +245,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="STORYLINE :"
-                            android:textColor="@android:color/white"
+                            android:textColor="@android:color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -255,7 +255,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/tvDesc"
                             android:layout_marginTop="5dp"
-                            android:textColor="@android:color/white"
+                            android:textColor="@android:color/black"
                             android:textSize="14sp" />
 
                     </RelativeLayout>
@@ -270,8 +270,8 @@
                 android:layout_gravity="start"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Trailer"
-                android:textColor="@android:color/white"
+                android:text="Chapter"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -291,7 +291,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="170dp"
         android:layout_marginEnd="10dp"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
         app:cardCornerRadius="5dp"
         app:cardElevation="3dp">
 
@@ -305,13 +305,13 @@
 
     </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabShare"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_share" />
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fabShare"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:src="@drawable/ic_share" />-->
 
 </RelativeLayout>

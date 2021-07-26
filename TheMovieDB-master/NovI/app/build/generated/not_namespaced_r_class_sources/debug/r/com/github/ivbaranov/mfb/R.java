@@ -40,9 +40,9 @@ public final class R {
         private id() {}
 
         public static final int black = 0x7f080047;
-        public static final int heart = 0x7f080090;
-        public static final int star = 0x7f080114;
-        public static final int white = 0x7f08015c;
+        public static final int heart = 0x7f08008f;
+        public static final int star = 0x7f080111;
+        public static final int white = 0x7f080157;
     }
     public static final class string {
         private string() {}
