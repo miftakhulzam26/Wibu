@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Android\\Contoh\\TheMovieDB-master\\Movie Catalogue\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mn\\values-mn.xml",
+            "outputFile": "D:\\Document\\Wibu\\TheMovieDB-master\\Movie Catalogue\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mn\\values-mn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\arder\\.gradle\\caches\\transforms-2\\files-2.1\\56b8faf7ef3b4d033ffa4daba09a688f\\core-1.3.0\\res\\values-mn\\values-mn.xml",

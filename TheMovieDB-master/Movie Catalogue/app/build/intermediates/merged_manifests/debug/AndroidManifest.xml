@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.azhar.moviedb"
+    package="com.aziz.novi"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -24,11 +24,9 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
-        <activity android:name="com.azhar.moviedb.activities.SettingActivity" />
-        <activity android:name="com.azhar.moviedb.activities.DetailMovieActivity" />
-        <activity android:name="com.azhar.moviedb.activities.DetailTelevisionActivity" />
+        <activity android:name="com.aziz.novi.activities.DetailMovieActivity" />
         <activity
-            android:name="com.azhar.moviedb.activities.MainActivity"
+            android:name="com.aziz.novi.activities.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="adjustPan" >
             <intent-filter>
@@ -38,18 +36,9 @@
             </intent-filter>
         </activity>
 
-        <receiver
-            android:name="com.azhar.moviedb.notification.NotificationReleaseReceiver"
-            android:enabled="true"
-            android:exported="true" />
-        <receiver
-            android:name="com.azhar.moviedb.notification.NotificationDailyReceiver"
-            android:enabled="true"
-            android:exported="true" />
-
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="com.azhar.moviedb.lifecycle-process"
+            android:authorities="com.aziz.novi.lifecycle-process"
             android:exported="false"
             android:multiprocess="true" />
     </application>

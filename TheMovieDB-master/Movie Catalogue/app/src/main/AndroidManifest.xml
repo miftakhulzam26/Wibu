@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.azhar.moviedb">
+    package="com.aziz.novi">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -15,11 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.SettingActivity" />
-        <activity android:name=".activities.DetailMovieActivity" />
-        <activity android:name=".activities.DetailTelevisionActivity" />
+        <activity android:name="com.aziz.novi.activities.DetailMovieActivity" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.aziz.novi.activities.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -29,17 +27,6 @@
             </intent-filter>
         </activity>
 
-        <receiver
-            android:name=".notification.NotificationReleaseReceiver"
-            android:enabled="true"
-            android:exported="true"
-            tools:ignore="ExportedReceiver" />
-
-        <receiver
-            android:name=".notification.NotificationDailyReceiver"
-            android:enabled="true"
-            android:exported="true"
-            tools:ignore="ExportedReceiver" />
     </application>
 
 </manifest>

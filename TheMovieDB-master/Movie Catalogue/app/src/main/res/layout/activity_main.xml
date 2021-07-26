@@ -54,24 +54,25 @@
                 android:layout_weight="1"
                 app:bt_colorActive="#81c784"
                 app:bt_colorInactive="#78909c"
-                app:bt_icon="@drawable/ic_movie"
+                app:bt_icon="@drawable/ic_home"
                 app:bt_shape="@drawable/tab_movie_color"
-                app:bt_title="Movie"
+                app:bt_title="Home"
                 app:bt_titlePadding="5dp"
-                app:bt_titleSize="10sp" />
+                app:bt_titleSize="10sp"
+                />
 
-            <com.gauravk.bubblenavigation.BubbleToggleView
-                android:id="@+id/tabTV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:bt_colorActive="#aa86f7"
-                app:bt_colorInactive="#78909c"
-                app:bt_icon="@drawable/ic_live_tv"
-                app:bt_shape="@drawable/tab_tv_color"
-                app:bt_title="Tv Show"
-                app:bt_titlePadding="5dp"
-                app:bt_titleSize="10sp" />
+<!--            <com.gauravk.bubblenavigation.BubbleToggleView-->
+<!--                android:id="@+id/tabTV"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                app:bt_colorActive="#aa86f7"-->
+<!--                app:bt_colorInactive="#78909c"-->
+<!--                app:bt_icon="@drawable/ic_live_tv"-->
+<!--                app:bt_shape="@drawable/tab_tv_color"-->
+<!--                app:bt_title="Tv Show"-->
+<!--                app:bt_titlePadding="5dp"-->
+<!--                app:bt_titleSize="10sp" />-->
 
             <com.gauravk.bubblenavigation.BubbleToggleView
                 android:id="@+id/tabFav"

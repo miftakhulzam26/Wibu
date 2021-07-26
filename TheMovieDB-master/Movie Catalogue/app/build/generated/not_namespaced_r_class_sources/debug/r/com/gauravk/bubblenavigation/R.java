@@ -809,23 +809,23 @@ public final class R {
         public static final int submenuarrow = 0x7f080118;
         public static final int submit_area = 0x7f080119;
         public static final int tabMode = 0x7f08011f;
-        public static final int tag_transition_group = 0x7f080126;
-        public static final int tag_unhandled_key_event_manager = 0x7f080127;
-        public static final int tag_unhandled_key_listeners = 0x7f080128;
-        public static final int text = 0x7f08012d;
-        public static final int text2 = 0x7f08012e;
-        public static final int textSpacerNoButtons = 0x7f080130;
-        public static final int textSpacerNoTitle = 0x7f080131;
-        public static final int time = 0x7f08013b;
-        public static final int title = 0x7f08013c;
-        public static final int titleDividerNoCustom = 0x7f08013d;
-        public static final int title_template = 0x7f08013e;
-        public static final int top = 0x7f080140;
-        public static final int topPanel = 0x7f080141;
-        public static final int uniform = 0x7f080155;
-        public static final int up = 0x7f080157;
-        public static final int wrap = 0x7f080160;
-        public static final int wrap_content = 0x7f080161;
+        public static final int tag_transition_group = 0x7f080125;
+        public static final int tag_unhandled_key_event_manager = 0x7f080126;
+        public static final int tag_unhandled_key_listeners = 0x7f080127;
+        public static final int text = 0x7f08012c;
+        public static final int text2 = 0x7f08012d;
+        public static final int textSpacerNoButtons = 0x7f08012f;
+        public static final int textSpacerNoTitle = 0x7f080130;
+        public static final int time = 0x7f08013a;
+        public static final int title = 0x7f08013b;
+        public static final int titleDividerNoCustom = 0x7f08013c;
+        public static final int title_template = 0x7f08013d;
+        public static final int top = 0x7f08013f;
+        public static final int topPanel = 0x7f080140;
+        public static final int uniform = 0x7f080154;
+        public static final int up = 0x7f080156;
+        public static final int wrap = 0x7f08015f;
+        public static final int wrap_content = 0x7f080160;
     }
     public static final class integer {
         private integer() {}
@@ -909,7 +909,7 @@ public final class R {
         public static final int abc_shareactionprovider_share_with_application = 0x7f0e0019;
         public static final int abc_toolbar_collapse_description = 0x7f0e001a;
         public static final int app_name = 0x7f0e001b;
-        public static final int search_menu_title = 0x7f0e0055;
+        public static final int search_menu_title = 0x7f0e0054;
         public static final int status_bar_notification_info_overflow = 0x7f0e0056;
     }
     public static final class style {
