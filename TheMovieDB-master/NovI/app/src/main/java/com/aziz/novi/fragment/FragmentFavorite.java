@@ -28,7 +28,7 @@ public class FragmentFavorite extends Fragment {
         TabLayout tabLayout = rootView.findViewById(R.id.tabFavorite);
         tabLayout.setupWithViewPager(viewPager);
 
-        (tabLayout.getTabAt(0)).setText("Movie  ");
+        (tabLayout.getTabAt(0)).setText("Novel  ");
 //        (tabLayout.getTabAt(1)).setText("TV Show");
 
         return rootView;
