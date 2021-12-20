@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+<<<<<<< Updated upstream
 // Route::get('/', 'LpageController@index');
+=======
+
+>>>>>>> Stashed changes
 
 
 Route::group(['namespace'=>'Backend'], function () {
@@ -57,6 +61,8 @@ Route::group(['namespace'=>'Frontend'], function () {
     Route::get('query', 'SfinderController@show');
     Route::resource('addgen', 'GenreTitleController');
     Route::resource('addtag', 'TagTitleController');
+    Route::get('/', 'LpageController@index');
+
 
 });
 // Route::resource('posts', PostCRUDController::class);
