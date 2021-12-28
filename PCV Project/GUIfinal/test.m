@@ -1,5 +1,5 @@
 latih = xlsread('extract_baru.xlsx');
-gambar2 = imread('Pegagan/1.jpg');%sesuaikan nama folder dan file  
+gambar2 = imread('1.jpg');%sesuaikan nama folder dan file  
 gambar = imresize(gambar2,[300,300]);
 blue = gambar(:,:,3);
 [A, R] = size(blue);
